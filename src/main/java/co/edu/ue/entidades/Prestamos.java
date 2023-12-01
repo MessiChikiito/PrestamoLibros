@@ -1,5 +1,5 @@
 
-package co.edu.co.entidades;
+package co.edu.ue.entidades;
 
 
 public class Prestamos {
@@ -9,6 +9,8 @@ public class Prestamos {
     private int lect_id;
     private int libr_codigo;
     private int usur_id;
+    
+    
     
     
 }

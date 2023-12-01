@@ -1,5 +1,5 @@
 
-package co.edu.co.entidades;
+package co.edu.ue.entidades;
 
 
 public class Autores {
