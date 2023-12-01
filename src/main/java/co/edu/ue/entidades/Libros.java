@@ -7,10 +7,13 @@ public class Libros {
     private int libr_codigo;
     private String libr_titulo;
     private int edit_id;
-    private int aut_id;
+    
+    public Libros (){}
+    
 
-    public Libros(String libr_titulo) {
+    public Libros(String libr_titulo, int edit_id) {
         this.libr_titulo = libr_titulo;
+        this.edit_id = edit_id;
     }
 
     public int getLibr_codigo() {
@@ -37,14 +40,6 @@ public class Libros {
         this.edit_id = edit_id;
     }
 
-    public int getAut_id() {
-        return aut_id;
-    }
-
-    public void setAut_id(int aut_id) {
-        this.aut_id = aut_id;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -52,11 +47,8 @@ public class Libros {
         sb.append("libr_codigo=").append(libr_codigo);
         sb.append(", libr_titulo=").append(libr_titulo);
         sb.append(", edit_id=").append(edit_id);
-        sb.append(", aut_id=").append(aut_id);
         sb.append('}');
         return sb.toString();
     }
-    
-    
     
 }
