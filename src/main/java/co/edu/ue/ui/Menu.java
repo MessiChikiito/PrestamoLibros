@@ -38,52 +38,36 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        separador1 = new javax.swing.JSeparator();
-        separador2 = new javax.swing.JSeparator();
-        separador3 = new javax.swing.JSeparator();
-        separador4 = new javax.swing.JSeparator();
-        separador5 = new javax.swing.JSeparator();
-        separador6 = new javax.swing.JSeparator();
+        negro_login2 = new javax.swing.JLabel();
+        content = new javax.swing.JPanel();
+        menubarra = new javax.swing.JPanel();
         solicitud_de_libro = new javax.swing.JButton();
         consulta_de_libro = new javax.swing.JButton();
-        Registro_de_libro = new javax.swing.JButton();
-        consulta_de_libro3 = new javax.swing.JButton();
-        Registro_de_usuario = new javax.swing.JButton();
-        buttoncerrarsesion = new javax.swing.JButton();
-        negro_login2 = new javax.swing.JLabel();
-        negro_login = new javax.swing.JLabel();
-        naranja_login = new javax.swing.JLabel();
-        naranja2_login = new javax.swing.JLabel();
-        content = new javax.swing.JPanel();
+        negro_login1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        separador1.setBackground(new java.awt.Color(244, 121, 32));
-        separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 120, 210, 10));
+        negro_login2.setBackground(new java.awt.Color(51, 49, 50));
+        negro_login2.setOpaque(true);
+        jPanel1.add(negro_login2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 20, 520));
 
-        separador2.setBackground(new java.awt.Color(244, 121, 32));
-        separador2.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 210, 10));
+        content.setBackground(new java.awt.Color(255, 255, 255));
 
-        separador3.setBackground(new java.awt.Color(244, 121, 32));
-        separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 210, 10));
+        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
+        content.setLayout(contentLayout);
+        contentLayout.setHorizontalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
+        );
+        contentLayout.setVerticalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
+        );
 
-        separador4.setBackground(new java.awt.Color(244, 121, 32));
-        separador4.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 210, 10));
-
-        separador5.setBackground(new java.awt.Color(244, 121, 32));
-        separador5.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 210, 10));
-
-        separador6.setBackground(new java.awt.Color(244, 121, 32));
-        separador6.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 360, 210, 10));
+        jPanel1.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 580, 520));
 
         solicitud_de_libro.setBackground(new java.awt.Color(51, 49, 50));
         solicitud_de_libro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -95,7 +79,6 @@ public class Menu extends javax.swing.JFrame {
                 solicitud_de_libroActionPerformed(evt);
             }
         });
-        jPanel1.add(solicitud_de_libro, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 210, 60));
 
         consulta_de_libro.setBackground(new java.awt.Color(51, 49, 50));
         consulta_de_libro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -108,89 +91,36 @@ public class Menu extends javax.swing.JFrame {
                 consulta_de_libroActionPerformed(evt);
             }
         });
-        jPanel1.add(consulta_de_libro, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 120, 210, 60));
 
-        Registro_de_libro.setBackground(new java.awt.Color(51, 49, 50));
-        Registro_de_libro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Registro_de_libro.setForeground(new java.awt.Color(255, 255, 255));
-        Registro_de_libro.setText("REGISTRO DE LIBRO");
-        Registro_de_libro.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        Registro_de_libro.setBorderPainted(false);
-        Registro_de_libro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Registro_de_libroActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Registro_de_libro, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 210, 60));
+        negro_login1.setBackground(new java.awt.Color(51, 49, 50));
+        negro_login1.setOpaque(true);
 
-        consulta_de_libro3.setBackground(new java.awt.Color(51, 49, 50));
-        consulta_de_libro3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        consulta_de_libro3.setForeground(new java.awt.Color(255, 255, 255));
-        consulta_de_libro3.setText("DEVOLUCION");
-        consulta_de_libro3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        consulta_de_libro3.setBorderPainted(false);
-        consulta_de_libro3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consulta_de_libro3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(consulta_de_libro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 210, 60));
-
-        Registro_de_usuario.setBackground(new java.awt.Color(51, 49, 50));
-        Registro_de_usuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Registro_de_usuario.setForeground(new java.awt.Color(255, 255, 255));
-        Registro_de_usuario.setText("REGISTRAR USUARIO");
-        Registro_de_usuario.setBorder(javax.swing.BorderFactory.createLineBorder(null));
-        Registro_de_usuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Registro_de_usuarioActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Registro_de_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 210, 60));
-
-        buttoncerrarsesion.setBackground(new java.awt.Color(51, 49, 50));
-        buttoncerrarsesion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        buttoncerrarsesion.setForeground(new java.awt.Color(255, 255, 255));
-        buttoncerrarsesion.setText("Cerrar sesion");
-        buttoncerrarsesion.setBorder(null);
-        buttoncerrarsesion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttoncerrarsesionActionPerformed(evt);
-            }
-        });
-        jPanel1.add(buttoncerrarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, 160, 50));
-
-        negro_login2.setBackground(new java.awt.Color(51, 49, 50));
-        negro_login2.setOpaque(true);
-        jPanel1.add(negro_login2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 20, 520));
-
-        negro_login.setBackground(new java.awt.Color(51, 49, 50));
-        negro_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        negro_login.setOpaque(true);
-        jPanel1.add(negro_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 210, 520));
-
-        naranja_login.setBackground(new java.awt.Color(251, 165, 26));
-        naranja_login.setOpaque(true);
-        jPanel1.add(naranja_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 220, 520));
-
-        naranja2_login.setBackground(new java.awt.Color(244, 121, 32));
-        naranja2_login.setOpaque(true);
-        jPanel1.add(naranja2_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 230, 520));
-
-        content.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
-        content.setLayout(contentLayout);
-        contentLayout.setHorizontalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        javax.swing.GroupLayout menubarraLayout = new javax.swing.GroupLayout(menubarra);
+        menubarra.setLayout(menubarraLayout);
+        menubarraLayout.setHorizontalGroup(
+            menubarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menubarraLayout.createSequentialGroup()
+                .addComponent(negro_login1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(consulta_de_libro, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(solicitud_de_libro, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        contentLayout.setVerticalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        menubarraLayout.setVerticalGroup(
+            menubarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menubarraLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(menubarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(negro_login1, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(menubarraLayout.createSequentialGroup()
+                        .addComponent(solicitud_de_libro, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76)
+                        .addComponent(consulta_de_libro, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(202, 202, 202))
         );
 
-        jPanel1.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 570, 520));
+        jPanel1.add(menubarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 230, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -205,13 +135,6 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void buttoncerrarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncerrarsesionActionPerformed
-
-        Principal v1 =new Principal();
-        v1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_buttoncerrarsesionActionPerformed
 
     private void solicitud_de_libroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solicitud_de_libroActionPerformed
         Solicitar_prestamo p1 = new Solicitar_prestamo ();
@@ -234,18 +157,6 @@ public class Menu extends javax.swing.JFrame {
         content.revalidate();
         content.repaint();
     }//GEN-LAST:event_consulta_de_libroActionPerformed
-
-    private void Registro_de_libroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Registro_de_libroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Registro_de_libroActionPerformed
-
-    private void Registro_de_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Registro_de_usuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Registro_de_usuarioActionPerformed
-
-    private void consulta_de_libro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consulta_de_libro3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_consulta_de_libro3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,23 +194,12 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Registro_de_libro;
-    private javax.swing.JButton Registro_de_usuario;
-    private javax.swing.JButton buttoncerrarsesion;
     private javax.swing.JButton consulta_de_libro;
-    private javax.swing.JButton consulta_de_libro3;
     private javax.swing.JPanel content;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel naranja2_login;
-    private javax.swing.JLabel naranja_login;
-    private javax.swing.JLabel negro_login;
+    private javax.swing.JPanel menubarra;
+    private javax.swing.JLabel negro_login1;
     private javax.swing.JLabel negro_login2;
-    private javax.swing.JSeparator separador1;
-    private javax.swing.JSeparator separador2;
-    private javax.swing.JSeparator separador3;
-    private javax.swing.JSeparator separador4;
-    private javax.swing.JSeparator separador5;
-    private javax.swing.JSeparator separador6;
     private javax.swing.JButton solicitud_de_libro;
     // End of variables declaration//GEN-END:variables
 }

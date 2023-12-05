@@ -91,6 +91,7 @@ public class Principal extends javax.swing.JFrame {
 
         textcontraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textcontraseña.setForeground(new java.awt.Color(102, 102, 102));
+        textcontraseña.setText("contraseña");
         textcontraseña.setBorder(null);
         textcontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
