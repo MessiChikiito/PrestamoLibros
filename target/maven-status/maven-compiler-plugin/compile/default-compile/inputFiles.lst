@@ -1,7 +1,15 @@
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\co\entidades\Lectores.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\co\entidades\Libros.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\co\entidades\Usuarios.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\ue\prestamolibros\PrestamoLibros.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\co\entidades\Autores.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\co\entidades\Editoriales.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\PrestamoLibros\src\main\java\co\edu\co\entidades\Prestamos.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Autores.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Registro.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Solicitar_prestamo.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Principal.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\util\Conexion.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Editoriales.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Lectores.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Prestamos.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Menu.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Usuarios.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Libros.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\EditorialesDao.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\AutoresDao.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Consultar_libro.java
+C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\prestamolibros\PrestamoLibros.java
