@@ -50,8 +50,14 @@ public class Registro extends javax.swing.JFrame {
         textcorreo = new javax.swing.JTextField();
         separador6 = new javax.swing.JSeparator();
         inicio = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        borrar = new javax.swing.JButton();
+        registro = new javax.swing.JButton();
+        finverificar = new javax.swing.JLabel();
+        fincontraseña1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        separador5 = new javax.swing.JSeparator();
+        separador7 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -62,19 +68,19 @@ public class Registro extends javax.swing.JFrame {
 
         negro_login.setBackground(new java.awt.Color(51, 49, 50));
         negro_login.setOpaque(true);
-        jPanel1.add(negro_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 70));
+        jPanel1.add(negro_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 70));
 
         negro_login1.setBackground(new java.awt.Color(51, 49, 50));
         negro_login1.setOpaque(true);
-        jPanel1.add(negro_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 80, 500));
+        jPanel1.add(negro_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 60, 500));
 
         naranja_login.setBackground(new java.awt.Color(251, 165, 26));
         naranja_login.setOpaque(true);
-        jPanel1.add(naranja_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 100, 520));
+        jPanel1.add(naranja_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 80, 520));
 
         naranja_login1.setBackground(new java.awt.Color(251, 165, 26));
         naranja_login1.setOpaque(true);
-        jPanel1.add(naranja_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 80));
+        jPanel1.add(naranja_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 80));
 
         naranja2_login.setBackground(new java.awt.Color(244, 121, 32));
         naranja2_login.setOpaque(true);
@@ -133,7 +139,7 @@ public class Registro extends javax.swing.JFrame {
         apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         apellido.setText("APELLIDO");
         apellido.setNextFocusableComponent(textapellido);
-        jPanel1.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, -1, -1));
+        jPanel1.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
 
         textapellido.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textapellido.setForeground(new java.awt.Color(153, 153, 153));
@@ -146,11 +152,11 @@ public class Registro extends javax.swing.JFrame {
                 textapellidoActionPerformed(evt);
             }
         });
-        jPanel1.add(textapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, 20));
+        jPanel1.add(textapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 280, 20));
 
         separador3.setBackground(new java.awt.Color(244, 121, 32));
         separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 280, 10));
+        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 290, 10));
 
         telefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         telefono.setText("TELEFONO");
@@ -173,12 +179,12 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 280, 10));
 
         correo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        correo.setText("CORREO");
-        jPanel1.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
+        correo.setText("CORREO (USUARIO)");
+        jPanel1.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, -1, -1));
 
         textcorreo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textcorreo.setForeground(new java.awt.Color(153, 153, 153));
-        textcorreo.setText("Introduce correo de contacto");
+        textcorreo.setText("Introduce correo para registro de usuario");
         textcorreo.setBorder(null);
         textcorreo.setNextFocusableComponent(correo);
         textcorreo.addActionListener(new java.awt.event.ActionListener() {
@@ -186,11 +192,11 @@ public class Registro extends javax.swing.JFrame {
                 textcorreoActionPerformed(evt);
             }
         });
-        jPanel1.add(textcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, 20));
+        jPanel1.add(textcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, 20));
 
         separador6.setBackground(new java.awt.Color(244, 121, 32));
         separador6.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 280, 10));
+        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 290, 10));
 
         inicio.setBackground(new java.awt.Color(251, 165, 26));
         inicio.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -203,22 +209,60 @@ public class Registro extends javax.swing.JFrame {
         });
         jPanel1.add(inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 140, 40));
 
-        jButton1.setBackground(new java.awt.Color(251, 165, 26));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("BORRAR");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        borrar.setBackground(new java.awt.Color(251, 165, 26));
+        borrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        borrar.setText("BORRAR");
+        borrar.setBorder(null);
+        borrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                borrarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 140, 40));
+        jPanel1.add(borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 140, 40));
 
-        jButton2.setBackground(new java.awt.Color(251, 165, 26));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setText("REGISTRAR");
-        jButton2.setBorder(null);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 140, 40));
+        registro.setBackground(new java.awt.Color(251, 165, 26));
+        registro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        registro.setText("REGISTRAR");
+        registro.setBorder(null);
+        jPanel1.add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 140, 40));
+
+        finverificar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        finverificar.setText("VERIFICAR CONTRASEÑA:");
+        jPanel1.add(finverificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, 20));
+
+        fincontraseña1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        fincontraseña1.setText("CONTRASEÑA:");
+        jPanel1.add(fincontraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, -1));
+
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(153, 153, 153));
+        jTextField2.setText("Introduce contraseña");
+        jTextField2.setBorder(null);
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 300, 20));
+
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(153, 153, 153));
+        jTextField3.setText("verifica la contraseña");
+        jTextField3.setBorder(null);
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 190, 20));
+
+        separador5.setBackground(new java.awt.Color(244, 121, 32));
+        separador5.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 300, 10));
+
+        separador7.setBackground(new java.awt.Color(244, 121, 32));
+        separador7.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 290, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,9 +307,17 @@ public class Registro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_texttelefonoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_borrarActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,12 +357,15 @@ public class Registro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Registro_de_usuario;
     private javax.swing.JLabel apellido;
+    private javax.swing.JButton borrar;
     private javax.swing.JLabel correo;
     private javax.swing.JLabel documento;
+    private javax.swing.JLabel fincontraseña1;
+    private javax.swing.JLabel finverificar;
     private javax.swing.JButton inicio;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel naranja2_login;
     private javax.swing.JLabel naranja2_login1;
     private javax.swing.JLabel naranja_login;
@@ -318,11 +373,14 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JLabel negro_login;
     private javax.swing.JLabel negro_login1;
     private javax.swing.JLabel nombre;
+    private javax.swing.JButton registro;
     private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
     private javax.swing.JSeparator separador3;
     private javax.swing.JSeparator separador4;
+    private javax.swing.JSeparator separador5;
     private javax.swing.JSeparator separador6;
+    private javax.swing.JSeparator separador7;
     private javax.swing.JLabel telefono;
     private javax.swing.JTextField textapellido;
     private javax.swing.JTextField textcorreo;

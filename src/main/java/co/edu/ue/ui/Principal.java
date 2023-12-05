@@ -55,11 +55,11 @@ public class Principal extends javax.swing.JFrame {
 
         negro_login.setBackground(new java.awt.Color(51, 49, 50));
         negro_login.setOpaque(true);
-        INICIO.add(negro_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 320, 520));
+        INICIO.add(negro_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 260, 520));
 
         naranja_login.setBackground(new java.awt.Color(251, 165, 26));
         naranja_login.setOpaque(true);
-        INICIO.add(naranja_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 330, 520));
+        INICIO.add(naranja_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 320, 520));
 
         naranja2_login.setBackground(new java.awt.Color(244, 121, 32));
         naranja2_login.setOpaque(true);
@@ -70,8 +70,8 @@ public class Principal extends javax.swing.JFrame {
         INICIO.add(inicio_de_sesion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 280, 20));
 
         usuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        usuario.setText("USUARIO");
-        INICIO.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 120, 20));
+        usuario.setText("USUARIO (CORREO)");
+        INICIO.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 190, 20));
 
         textusuario.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textusuario.setForeground(new java.awt.Color(102, 102, 102));
