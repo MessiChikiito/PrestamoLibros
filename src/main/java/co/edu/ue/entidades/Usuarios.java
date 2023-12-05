@@ -8,11 +8,11 @@ public class Usuarios {
     private String usur_apellidos;
     private String usur_email;
     private String usur_contraseña;
-    private String usur_documento;
+    private int usur_documento;
     
     public Usuarios (){}
 
-    public Usuarios(String usur_nombres, String usur_apellidos, String usur_email, String usur_contraseña, String usur_documento) {
+    public Usuarios(String usur_nombres, String usur_apellidos, String usur_email, String usur_contraseña, int usur_documento) {
         this.usur_nombres = usur_nombres;
         this.usur_apellidos = usur_apellidos;
         this.usur_email = usur_email;
@@ -60,11 +60,11 @@ public class Usuarios {
         this.usur_contraseña = usur_contraseña;
     }
 
-    public String getUsur_documento() {
+    public int getUsur_documento() {
         return usur_documento;
     }
 
-    public void setUsur_documento(String usur_documento) {
+    public void setUsur_documento(int usur_documento) {
         this.usur_documento = usur_documento;
     }
 
@@ -80,8 +80,6 @@ public class Usuarios {
         sb.append(", usur_documento=").append(usur_documento);
         sb.append('}');
         return sb.toString();
-    }
-    
-    
+    }    
     
 }
