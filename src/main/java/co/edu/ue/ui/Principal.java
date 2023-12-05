@@ -4,7 +4,6 @@
  */
 package co.edu.ue.ui;
 
-import java.awt.BorderLayout;
 
 /**
  *
@@ -78,6 +77,11 @@ public class Principal extends javax.swing.JFrame {
         textusuario.setText("Introduce nombre del usuario");
         textusuario.setBorder(null);
         textusuario.setNextFocusableComponent(usuario);
+        textusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textusuarioActionPerformed(evt);
+            }
+        });
         INICIO.add(textusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 310, 40));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
@@ -160,6 +164,10 @@ public class Principal extends javax.swing.JFrame {
         v3.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_buttonentrarActionPerformed
+
+    private void textusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textusuarioActionPerformed
 
     /**
      * @param args the command line arguments
