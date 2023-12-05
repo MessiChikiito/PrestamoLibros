@@ -4,6 +4,8 @@
  */
 package co.edu.ue.ui;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author mxmol
@@ -15,6 +17,8 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        
+       
     }
 
     /**
@@ -26,21 +30,136 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        INICIO = new javax.swing.JPanel();
+        negro_login = new javax.swing.JLabel();
+        naranja_login = new javax.swing.JLabel();
+        naranja2_login = new javax.swing.JLabel();
+        inicio_de_sesion1 = new javax.swing.JLabel();
+        usuario = new javax.swing.JLabel();
+        textusuario = new javax.swing.JTextField();
+        separador1 = new javax.swing.JSeparator();
+        contraseña = new javax.swing.JLabel();
+        textcontraseña = new javax.swing.JPasswordField();
+        separador2 = new javax.swing.JSeparator();
+        buttonregistro = new javax.swing.JButton();
+        buttonentrar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setResizable(false);
+
+        INICIO.setBackground(new java.awt.Color(255, 255, 255));
+        INICIO.setDoubleBuffered(false);
+        INICIO.setEnabled(false);
+        INICIO.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        negro_login.setBackground(new java.awt.Color(51, 49, 50));
+        negro_login.setOpaque(true);
+        INICIO.add(negro_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 320, 520));
+
+        naranja_login.setBackground(new java.awt.Color(251, 165, 26));
+        naranja_login.setOpaque(true);
+        INICIO.add(naranja_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 330, 520));
+
+        naranja2_login.setBackground(new java.awt.Color(244, 121, 32));
+        naranja2_login.setOpaque(true);
+        INICIO.add(naranja2_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 350, 520));
+
+        inicio_de_sesion1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        inicio_de_sesion1.setText("INICIO DE SESION");
+        INICIO.add(inicio_de_sesion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 280, 20));
+
+        usuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        usuario.setText("USUARIO");
+        INICIO.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 120, 20));
+
+        textusuario.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textusuario.setForeground(new java.awt.Color(102, 102, 102));
+        textusuario.setText("Introduce nombre del usuario");
+        textusuario.setBorder(null);
+        textusuario.setNextFocusableComponent(usuario);
+        INICIO.add(textusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 310, 40));
+
+        separador1.setBackground(new java.awt.Color(244, 121, 32));
+        separador1.setForeground(new java.awt.Color(244, 121, 32));
+        INICIO.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 310, 10));
+
+        contraseña.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        contraseña.setLabelFor(textcontraseña);
+        contraseña.setText("CONTRASEÑA");
+        INICIO.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 320, 20));
+
+        textcontraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textcontraseña.setForeground(new java.awt.Color(102, 102, 102));
+        textcontraseña.setText("contraseña");
+        textcontraseña.setBorder(null);
+        textcontraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textcontraseñaActionPerformed(evt);
+            }
+        });
+        INICIO.add(textcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 330, 30));
+
+        separador2.setBackground(new java.awt.Color(244, 121, 32));
+        separador2.setForeground(new java.awt.Color(244, 121, 32));
+        INICIO.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 310, 10));
+
+        buttonregistro.setBackground(new java.awt.Color(251, 165, 26));
+        buttonregistro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        buttonregistro.setText("REGISTRARSE");
+        buttonregistro.setBorder(null);
+        buttonregistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonregistro.setName(""); // NOI18N
+        buttonregistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonregistroActionPerformed(evt);
+            }
+        });
+        INICIO.add(buttonregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 130, 40));
+
+        buttonentrar.setBackground(new java.awt.Color(251, 165, 26));
+        buttonentrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        buttonentrar.setText("ENTRAR");
+        buttonentrar.setBorder(null);
+        buttonentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonentrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonentrarActionPerformed(evt);
+            }
+        });
+        INICIO.add(buttonentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 110, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(INICIO, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(INICIO, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+
+        INICIO.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textcontraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textcontraseñaActionPerformed
+
+    private void buttonregistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonregistroActionPerformed
+        Registro v2 =new Registro();
+        v2.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonregistroActionPerformed
+
+    private void buttonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonentrarActionPerformed
+        Menu v3 =new Menu();
+        v3.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonentrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +197,18 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel INICIO;
+    private javax.swing.JButton buttonentrar;
+    private javax.swing.JButton buttonregistro;
+    private javax.swing.JLabel contraseña;
+    private javax.swing.JLabel inicio_de_sesion1;
+    private javax.swing.JLabel naranja2_login;
+    private javax.swing.JLabel naranja_login;
+    private javax.swing.JLabel negro_login;
+    private javax.swing.JSeparator separador1;
+    private javax.swing.JSeparator separador2;
+    private javax.swing.JPasswordField textcontraseña;
+    private javax.swing.JTextField textusuario;
+    private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }
