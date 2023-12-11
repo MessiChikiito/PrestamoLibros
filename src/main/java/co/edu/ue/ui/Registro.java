@@ -4,6 +4,12 @@
  */
 package co.edu.ue.ui;
 
+import co.edu.ue.dao.UsuariosDao;
+import co.edu.ue.entidades.Usuarios;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author mxmol
@@ -54,7 +60,7 @@ public class Registro extends javax.swing.JFrame {
         registro = new javax.swing.JButton();
         finverificar = new javax.swing.JLabel();
         fincontraseña1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        textcontraseña = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         separador5 = new javax.swing.JSeparator();
         separador7 = new javax.swing.JSeparator();
@@ -116,7 +122,7 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 280, 10));
 
         nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        nombre.setText("NOMBRE");
+        nombre.setText("NOMBRES");
         nombre.setNextFocusableComponent(textnombre);
         jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, 20));
 
@@ -137,7 +143,7 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 280, 10));
 
         apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        apellido.setText("APELLIDO");
+        apellido.setText("APELLIDOS");
         apellido.setNextFocusableComponent(textapellido);
         jPanel1.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
 
@@ -224,6 +230,11 @@ public class Registro extends javax.swing.JFrame {
         registro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         registro.setText("REGISTRAR");
         registro.setBorder(null);
+        registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registroActionPerformed(evt);
+            }
+        });
         jPanel1.add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 140, 40));
 
         finverificar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -234,16 +245,16 @@ public class Registro extends javax.swing.JFrame {
         fincontraseña1.setText("CONTRASEÑA:");
         jPanel1.add(fincontraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, -1));
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField2.setText("Introduce contraseña");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        textcontraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textcontraseña.setForeground(new java.awt.Color(153, 153, 153));
+        textcontraseña.setText("Introduce contraseña");
+        textcontraseña.setBorder(null);
+        textcontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                textcontraseñaActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 300, 20));
+        jPanel1.add(textcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 300, 20));
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(153, 153, 153));
@@ -311,13 +322,27 @@ public class Registro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_borrarActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void textcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textcontraseñaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_textcontraseñaActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
+        Usuarios usuario = new Usuarios(textdocumento.getText(), textnombre.getText(), texttelefono.getText(),
+                textapellido.getText(), textcorreo.getText(), textcontraseña.getText());
+        
+        UsuariosDao dao = new UsuariosDao();
+        try {
+            dao.addUser(usuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cleanFields();
+        
+    }//GEN-LAST:event_registroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -364,7 +389,6 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JLabel finverificar;
     private javax.swing.JButton inicio;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel naranja2_login;
     private javax.swing.JLabel naranja2_login1;
@@ -383,9 +407,14 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JSeparator separador7;
     private javax.swing.JLabel telefono;
     private javax.swing.JTextField textapellido;
+    private javax.swing.JTextField textcontraseña;
     private javax.swing.JTextField textcorreo;
     private javax.swing.JTextField textdocumento;
     private javax.swing.JTextField textnombre;
     private javax.swing.JTextField texttelefono;
     // End of variables declaration//GEN-END:variables
+
+    private void cleanFields() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

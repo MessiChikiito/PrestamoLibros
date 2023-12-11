@@ -1,8 +1,10 @@
 
 package co.edu.ue.util;
 
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Conexion {
@@ -17,7 +19,7 @@ public class Conexion {
     public Conexion(){
         this.user = "root";
         this.pass = "";
-        this.dataBase = "prestamolibros";
+        this.dataBase ="prestamolibros";
         this.port = "3306";
         this.server = "localhost";
         this.cadConexion = "jdbc:mysql://"+ this.server + ":"+ this.port + "/" + this.dataBase;
@@ -28,8 +30,7 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             this.con = DriverManager.getConnection(this.cadConexion, this.user, this.pass);
-            JOptionPane.showMessageDialog(null, "Hay conexión");
-            
+            JOptionPane.showMessageDialog(null, "xd");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error, no hay conexión"+e.toString());
         }
