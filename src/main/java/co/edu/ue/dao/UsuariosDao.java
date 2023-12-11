@@ -7,11 +7,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class UsuarioDao {
+public class UsuariosDao {
     Conexion conexion;
     PreparedStatement statement;
 
-    public UsuarioDao (){
+    public UsuariosDao (){
         conexion = new Conexion ();
         this.statement = null;
     }
@@ -26,7 +26,7 @@ public class UsuarioDao {
                 this.statement.setString(2, user.getUsur_apellidos());
                 this.statement.setString(3, user.getUsur_email());
                 this.statement.setString(4, user.getUsur_contraseña());
-                this.statement.setString(5, user.getUsur_documento());
+                this.statement.setInt(5, user.getUsur_documento());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
                     JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
@@ -47,3 +47,4 @@ public class UsuarioDao {
     }
 
 }
+
