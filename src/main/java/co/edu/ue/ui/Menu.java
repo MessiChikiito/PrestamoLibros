@@ -1,6 +1,7 @@
 
 package co.edu.ue.ui;
 
+import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
 public class Menu extends javax.swing.JFrame {
@@ -12,14 +13,14 @@ public class Menu extends javax.swing.JFrame {
     }
 
     private void InitContent(){
-        ShowJPanel(new Principal());
+        ShowJPanel(new Bienvenido());
     }
     
     private void ShowJPanel (JPanel p){
         p.setSize(800,500);
         p.setLocation(0,0);
         Content.removeAll();
-        Content.add (p, borderLayout.CENTER);
+        Content.add (p, BorderLayout.CENTER);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
