@@ -17,7 +17,7 @@ public class UsuariosDao {
     }
     public Usuarios addUser(Usuarios user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT datos VALUES(null,?,?,?,?,?);";
+        String query = "INSERT usuarios VALUES(null,?,?,?,?,?,?);";
 
         try {
             if (this.statement == null){
@@ -26,7 +26,8 @@ public class UsuariosDao {
                 this.statement.setString(2, user.getUsur_apellidos());
                 this.statement.setString(3, user.getUsur_email());
                 this.statement.setString(4, user.getUsur_contraseña());
-                this.statement.setInt(5, user.getUsur_documento());
+                this.statement.setString(5, user.getUsur_documento());
+                this.statement.setString(6, user.getUsur_telefono());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
                     JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
