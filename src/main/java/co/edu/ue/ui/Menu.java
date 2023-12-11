@@ -4,7 +4,6 @@
  */
 package co.edu.ue.ui;
 
-
 /**
  *
  * @author mxmol
@@ -27,188 +26,21 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        menu = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        P2Solicitud_prestamo = new javax.swing.JButton();
-        P3Registro_lector = new javax.swing.JButton();
-        P4Registro_libros = new javax.swing.JButton();
-        P5Registro_autor = new javax.swing.JButton();
-        P6Registro_editorial = new javax.swing.JButton();
-        P7Consultar_libros = new javax.swing.JButton();
-        P8Consultar_prestamos1 = new javax.swing.JButton();
-        Cerrarsesion = new javax.swing.JButton();
-        P7Consultar_libros1 = new javax.swing.JButton();
-        content = new javax.swing.JPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocationByPlatform(true);
-        setResizable(false);
-
-        jPanel2.setBackground(new java.awt.Color(250, 250, 250));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        menu.setBackground(new java.awt.Color(244, 121, 32));
-        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setBackground(new java.awt.Color(251, 165, 26));
-
-        jPanel3.setBackground(new java.awt.Color(51, 49, 50));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        P2Solicitud_prestamo.setBackground(new java.awt.Color(251, 165, 26));
-        P2Solicitud_prestamo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P2Solicitud_prestamo.setText("Prestamo");
-        P2Solicitud_prestamo.setBorder(null);
-        P2Solicitud_prestamo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        P2Solicitud_prestamo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                P2Solicitud_prestamoActionPerformed(evt);
-            }
-        });
-        jPanel3.add(P2Solicitud_prestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 270, 40));
-
-        P3Registro_lector.setBackground(new java.awt.Color(251, 165, 26));
-        P3Registro_lector.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P3Registro_lector.setText("Registro de lector");
-        P3Registro_lector.setBorder(null);
-        P3Registro_lector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        P3Registro_lector.setFocusTraversalPolicyProvider(true);
-        jPanel3.add(P3Registro_lector, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 70, 270, 40));
-
-        P4Registro_libros.setBackground(new java.awt.Color(251, 165, 26));
-        P4Registro_libros.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P4Registro_libros.setText("Registro de libros");
-        P4Registro_libros.setBorder(null);
-        P4Registro_libros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        P4Registro_libros.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                P4Registro_librosActionPerformed(evt);
-            }
-        });
-        jPanel3.add(P4Registro_libros, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 120, 270, 40));
-
-        P5Registro_autor.setBackground(new java.awt.Color(251, 165, 26));
-        P5Registro_autor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P5Registro_autor.setText("Registro de autor");
-        P5Registro_autor.setBorder(null);
-        P5Registro_autor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        P5Registro_autor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                P5Registro_autorActionPerformed(evt);
-            }
-        });
-        jPanel3.add(P5Registro_autor, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 170, 270, 40));
-
-        P6Registro_editorial.setBackground(new java.awt.Color(251, 165, 26));
-        P6Registro_editorial.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P6Registro_editorial.setText("Registro editorial");
-        P6Registro_editorial.setBorder(null);
-        P6Registro_editorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        P6Registro_editorial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                P6Registro_editorialActionPerformed(evt);
-            }
-        });
-        jPanel3.add(P6Registro_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 220, 270, 40));
-
-        P7Consultar_libros.setBackground(new java.awt.Color(251, 165, 26));
-        P7Consultar_libros.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P7Consultar_libros.setText("Consultar libros");
-        P7Consultar_libros.setBorder(null);
-        P7Consultar_libros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(P7Consultar_libros, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 270, 270, 40));
-
-        P8Consultar_prestamos1.setBackground(new java.awt.Color(251, 165, 26));
-        P8Consultar_prestamos1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P8Consultar_prestamos1.setText("Consultar prestamos");
-        P8Consultar_prestamos1.setBorder(null);
-        P8Consultar_prestamos1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        P8Consultar_prestamos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                P8Consultar_prestamos1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(P8Consultar_prestamos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 370, 270, 40));
-
-        Cerrarsesion.setBackground(new java.awt.Color(251, 165, 26));
-        Cerrarsesion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Cerrarsesion.setText("CERRAR SESION");
-        Cerrarsesion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CerrarsesionActionPerformed(evt);
-            }
-        });
-        jPanel3.add(Cerrarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 150, 40));
-
-        P7Consultar_libros1.setBackground(new java.awt.Color(251, 165, 26));
-        P7Consultar_libros1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        P7Consultar_libros1.setText("Consultar libros");
-        P7Consultar_libros1.setBorder(null);
-        P7Consultar_libros1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(P7Consultar_libros1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 320, 270, 40));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        menu.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 520));
-
-        jPanel2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 270, 520));
-
-        content.setBackground(new java.awt.Color(255, 255, 255));
-        content.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel2.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 500, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CerrarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarsesionActionPerformed
-        Principal v1 = new Principal();
-        v1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_CerrarsesionActionPerformed
-
-    private void P4Registro_librosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P4Registro_librosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_P4Registro_librosActionPerformed
-
-    private void P6Registro_editorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P6Registro_editorialActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_P6Registro_editorialActionPerformed
-
-    private void P8Consultar_prestamos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P8Consultar_prestamos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_P8Consultar_prestamos1ActionPerformed
-
-    private void P5Registro_autorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P5Registro_autorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_P5Registro_autorActionPerformed
-
-    private void P2Solicitud_prestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2Solicitud_prestamoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_P2Solicitud_prestamoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,19 +78,5 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cerrarsesion;
-    private javax.swing.JButton P2Solicitud_prestamo;
-    private javax.swing.JButton P3Registro_lector;
-    private javax.swing.JButton P4Registro_libros;
-    private javax.swing.JButton P5Registro_autor;
-    private javax.swing.JButton P6Registro_editorial;
-    private javax.swing.JButton P7Consultar_libros;
-    private javax.swing.JButton P7Consultar_libros1;
-    private javax.swing.JButton P8Consultar_prestamos1;
-    private javax.swing.JPanel content;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel menu;
     // End of variables declaration//GEN-END:variables
 }
