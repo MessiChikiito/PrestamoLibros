@@ -22,6 +22,7 @@ co\edu\ue\ui\z5Re_Autor$3.class
 co\edu\ue\ui\z6Re_Editorial$2.class
 co\edu\ue\ui\z2Prestamo.class
 co\edu\ue\ui\z2Prestamo$3.class
+co\edu\ue\ui\rs.class
 co\edu\ue\ui\z7Re_AutorLibro$1.class
 co\edu\ue\entidades\Prestamos.class
 co\edu\ue\ui\Menu$3.class
@@ -37,8 +38,10 @@ co\edu\ue\ui\z2Prestamo$7.class
 co\edu\ue\ui\Registro$5.class
 co\edu\ue\ui\z6Re_Editorial.class
 co\edu\ue\ui\Principal.class
+co\edu\ue\clases\AutoresLista.class
 co\edu\ue\ui\z1Bienvenida.class
 co\edu\ue\ui\z5Re_Autor$2.class
+co\edu\ue\ui\cn.class
 co\edu\ue\entidades\AutoresLibros.class
 co\edu\ue\ui\z3Re_Lector$5.class
 co\edu\ue\ui\z2Prestamo$4.class
@@ -59,7 +62,6 @@ co\edu\ue\dao\LibrosDao.class
 co\edu\ue\ui\Registro$1.class
 co\edu\ue\ui\Menu$6.class
 co\edu\ue\ui\z3Re_Lector$2.class
-co\edu\ue\ui\Bienvenido.class
 co\edu\ue\ui\Menu$5.class
 co\edu\ue\ui\Registro$6.class
 co\edu\ue\ui\z2Prestamo$8.class

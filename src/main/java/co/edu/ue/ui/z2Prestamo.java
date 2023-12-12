@@ -1,21 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package co.edu.ue.ui;
 
-/**
- *
- * @author mxmol
- */
+
+import co.edu.ue.entidades.Lectores;
+import co.edu.ue.util.ModeloLector;
+import java.util.ArrayList;
+
 public class z2Prestamo extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Prestamo2
-     */
     public z2Prestamo() {
         initComponents();
+        llenarLectores();
     }
+    
+    private void llenarLectores(){
+    ModeloLector  modLector = new ModeloLector();
+    ArrayList<Lectores> listaLectores = modLector.getLectores();
+    cbxlector.removeAllItems();
+    
+    for(int i=0; i<listaLectores.size();i++){
+    cbxlector.addItem(listaLectores.get(i).getLect_nombre());
+    }
+            }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +37,6 @@ public class z2Prestamo extends javax.swing.JPanel {
         textlect_nombre = new javax.swing.JTextField();
         textlect_nombre1 = new javax.swing.JTextField();
         textlect_nombre2 = new javax.swing.JTextField();
-        textlect_nombre3 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         lect_direccion = new javax.swing.JLabel();
         lect_nombre = new javax.swing.JLabel();
@@ -46,7 +51,7 @@ public class z2Prestamo extends javax.swing.JPanel {
         textlect_nombre5 = new javax.swing.JTextField();
         textlect_nombre6 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cbxlector = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jPanel7 = new javax.swing.JPanel();
 
@@ -71,7 +76,7 @@ public class z2Prestamo extends javax.swing.JPanel {
                 textlect_nombreActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 70, 30));
+        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 70, 30));
 
         textlect_nombre1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre1.setForeground(new java.awt.Color(102, 102, 102));
@@ -84,7 +89,7 @@ public class z2Prestamo extends javax.swing.JPanel {
                 textlect_nombre1ActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 70, 30));
+        jPanel1.add(textlect_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 70, 30));
 
         textlect_nombre2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre2.setForeground(new java.awt.Color(102, 102, 102));
@@ -96,19 +101,10 @@ public class z2Prestamo extends javax.swing.JPanel {
                 textlect_nombre2ActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 70, 30));
+        jPanel1.add(textlect_nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 70, 30));
 
-        textlect_nombre3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_nombre3.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_nombre3.setText("AÑO");
-        textlect_nombre3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        textlect_nombre3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_nombre3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 70, 30));
-
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("LIMPIAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,11 +119,11 @@ public class z2Prestamo extends javax.swing.JPanel {
 
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre.setText("FECHA DE PRESTAMO");
-        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 230, -1));
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 230, -1));
 
         lect_apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_apellido.setText("FECHA DE DEVOLUCION");
-        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 410, -1));
+        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 410, -1));
 
         lect_documento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_documento.setText("ID DEL USUARIO");
@@ -143,11 +139,13 @@ public class z2Prestamo extends javax.swing.JPanel {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 500, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("GUARDAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +177,7 @@ public class z2Prestamo extends javax.swing.JPanel {
                 textlect_nombre4ActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 70, 30));
+        jPanel1.add(textlect_nombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 70, 30));
 
         textlect_nombre5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre5.setForeground(new java.awt.Color(102, 102, 102));
@@ -191,7 +189,7 @@ public class z2Prestamo extends javax.swing.JPanel {
                 textlect_nombre5ActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 70, 30));
+        jPanel1.add(textlect_nombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 70, 30));
 
         textlect_nombre6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre6.setForeground(new java.awt.Color(102, 102, 102));
@@ -203,15 +201,17 @@ public class z2Prestamo extends javax.swing.JPanel {
                 textlect_nombre6ActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 70, 30));
+        jPanel1.add(textlect_nombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 70, 30));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 410, 30));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+        cbxlector.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
+        jPanel1.add(cbxlector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
         jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 410, 30));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, -1));
@@ -252,10 +252,6 @@ public class z2Prestamo extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_nombre2ActionPerformed
 
-    private void textlect_nombre3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_nombre3ActionPerformed
-
     private void textlect_nombre4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_nombre4ActionPerformed
@@ -270,10 +266,10 @@ public class z2Prestamo extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cbxlector;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
@@ -289,7 +285,6 @@ public class z2Prestamo extends javax.swing.JPanel {
     private javax.swing.JTextField textlect_nombre;
     private javax.swing.JTextField textlect_nombre1;
     private javax.swing.JTextField textlect_nombre2;
-    private javax.swing.JTextField textlect_nombre3;
     private javax.swing.JTextField textlect_nombre4;
     private javax.swing.JTextField textlect_nombre5;
     private javax.swing.JTextField textlect_nombre6;

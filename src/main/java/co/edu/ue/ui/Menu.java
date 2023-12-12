@@ -129,13 +129,16 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel3.add(Re_Editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 220, 30));
 
+        jButton7.setBackground(new java.awt.Color(255, 102, 0));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton7.setText("CERRAR SESION");
+        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 160, 40));
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 220, 40));
 
         Re_Editorial1.setBackground(new java.awt.Color(251, 165, 26));
         Re_Editorial1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
