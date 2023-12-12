@@ -3,9 +3,14 @@ package co.edu.ue.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class Conexion {
+
+    public static Statement createSatement() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private String user;
     private String pass;
     private String dataBase;

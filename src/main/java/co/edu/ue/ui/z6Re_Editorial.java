@@ -141,4 +141,6 @@ public class z6Re_Editorial extends javax.swing.JPanel {
     private javax.swing.JSeparator separador1;
     private javax.swing.JTextField textlect_id;
     // End of variables declaration//GEN-END:variables
+
+
 }

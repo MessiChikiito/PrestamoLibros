@@ -4,17 +4,29 @@
  */
 package co.edu.ue.ui;
 
+
+import co.edu.ue.entidades.Autores;
+import co.edu.ue.util.Conexion;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+
 /**
  *
  * @author mxmol
  */
-public class z6Re_Editorial extends javax.swing.JPanel {
+public class z7Re_AutorLibro extends javax.swing.JPanel {
+
 
     /**
      * Creates new form z3Re_Lector
      */
-    public z6Re_Editorial() {
+    public z7Re_AutorLibro() {
         initComponents();
+        cargarCombo(jComboBox1);
     }
 
     /**
@@ -106,10 +118,8 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         separador2.setForeground(new java.awt.Color(244, 121, 32));
         jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 410, 10));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 410, 30));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -155,4 +165,33 @@ public class z6Re_Editorial extends javax.swing.JPanel {
     private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
     // End of variables declaration//GEN-END:variables
+
+  
+private void cargarCombo(JComboBox c) {
+    DefaultComboBoxModel<Autores> comboModel = new DefaultComboBoxModel<>();
+
+     try {
+        Conexion connection = new Conexion();
+        Connection con = connection.getConectar();
+        
+        try (Statement statement = con.createStatement();
+             ResultSet rs = statement.executeQuery("SELECT aut_id, aut_nombre FROM Autores")) {
+
+            while (rs.next()) {
+                Autores autor = new Autores();
+                autor.setAut_id(rs.getInt("aut_id"));
+                autor.setAut_nombre(rs.getString("aut_nombre"));
+                comboModel.addElement(autor);
+            }
+        } // The resources (Statement and ResultSet) will be closed here.
+
+    } catch (SQLException e) {
+        // Handle the exception, log it, or display an error message
+        e.printStackTrace();
+    }
+
+    c.setModel(comboModel);
+}
+        
+    
 }
