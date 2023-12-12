@@ -1,51 +1,26 @@
-<<<<<<< HEAD
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\AutoresLibrosDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Autores.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Registro.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Principal.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\util\Conexion.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\PrestamosDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Editoriales.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\z2Prestamo.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\LibrosDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Lectores.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\z4Re_Libros.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Prestamos.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Bienvenido.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\Menu.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Usuarios.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\UsuariosDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\Libros.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\z1Bienvenida.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\EditorialesDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\LectoresDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\ui\z3Re_Lector.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\entidades\AutoresLibros.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\dao\AutoresDao.java
-C:\Users\mxmol\Documents\GitHub\PrestamoLibros\src\main\java\co\edu\ue\prestamolibros\PrestamoLibros.java
-=======
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z3Re_Lector.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\AutoresDao.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z6Re_Editorial.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\UsuariosDao.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\prestamolibros\PrestamoLibros.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Prestamos.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z4Re_Libros.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Editoriales.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\PrestamosDao.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Libros.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\AutoresLibrosDao.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\LectoresDao.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\EditorialesDao.java
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z3Re_Lector.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\AutoresLibros.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Lectores.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z1Bienvenida.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\Registro.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\UsuariosDao.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\prestamolibros\PrestamoLibros.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Autores.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Prestamos.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z4Re_Libros.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Usuarios.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Editoriales.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\util\Conexion.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\PrestamosDao.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z2Prestamo.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\entidades\Libros.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\LibrosDao.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\AutoresLibrosDao.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\LectoresDao.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\Principal.java
-C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\dao\EditorialesDao.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\Bienvenido.java
 C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\Menu.java
->>>>>>> 80a83ab11da027d2c8a000ae5041ac29f67fefff
+C:\Users\User\OneDrive - Uniempresarial\Documentos\NetBeansProjects\Final\PrestamoLibros\src\main\java\co\edu\ue\ui\z5Re_Autor.java

@@ -6,13 +6,13 @@ public class Lectores {
     private String lect_nombre;
     private String lect_apellido;
     private String lect_direccion;
-    private int lect_telefono;
-    private int lect_documento;
+    private String lect_telefono;
+    private String lect_documento;
     private String lect_email;
     
     public Lectores (){}
 
-    public Lectores(String lect_nombre, String lect_apellido, String lect_direccion, int lect_telefono, int lect_documento, String lect_email) {
+    public Lectores(String lect_nombre, String lect_apellido, String lect_direccion, String lect_telefono, String lect_documento, String lect_email) {
         this.lect_nombre = lect_nombre;
         this.lect_apellido = lect_apellido;
         this.lect_direccion = lect_direccion;
@@ -53,19 +53,19 @@ public class Lectores {
         this.lect_direccion = lect_direccion;
     }
 
-    public int getLect_telefono() {
+    public String getLect_telefono() {
         return lect_telefono;
     }
 
-    public void setLect_telefono(int lect_telefono) {
+    public void setLect_telefono(String lect_telefono) {
         this.lect_telefono = lect_telefono;
     }
 
-    public int getLect_documento() {
+    public String getLect_documento() {
         return lect_documento;
     }
 
-    public void setLect_documento(int lect_documento) {
+    public void setLect_documento(String lect_documento) {
         this.lect_documento = lect_documento;
     }
 
@@ -91,9 +91,4 @@ public class Lectores {
         sb.append('}');
         return sb.toString();
     }
-
-    
-    
-    
-    
 }

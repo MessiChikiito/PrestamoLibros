@@ -25,8 +25,8 @@ public class LectoresDao {
                 this.statement.setString(1, user.getLect_nombre());
                 this.statement.setString(2, user.getLect_apellido());
                 this.statement.setString(3, user.getLect_direccion());
-                this.statement.setInt(4, user.getLect_telefono());
-                this.statement.setInt(5, user.getLect_documento());
+                this.statement.setString(4, user.getLect_telefono());
+                this.statement.setString(5, user.getLect_documento());
                 this.statement.setString(6, user.getLect_email());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
