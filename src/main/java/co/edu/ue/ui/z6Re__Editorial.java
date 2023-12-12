@@ -1,22 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package co.edu.ue.ui;
 
-/**
- *
- * @author mxmol
- */
-public class z7Re_AutorLibro extends javax.swing.JPanel {
+import co.edu.ue.dao.EditorialesDao;
+import co.edu.ue.entidades.Editoriales;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-    /**
-     * Creates new form z3Re_Lector
-     */
-    public z7Re_AutorLibro() {
+public class z6Re__Editorial extends javax.swing.JPanel {
+
+    public z6Re__Editorial() {
         initComponents();
     }
-
+    private void cleanFields(){
+        txtNombreEditorial.setText("");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,14 +30,11 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         lect_id1 = new javax.swing.JLabel();
+        txtNombreEditorial = new javax.swing.JTextField();
         separador3 = new javax.swing.JSeparator();
         jPanel6 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        lect_id2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        separador4 = new javax.swing.JSeparator();
+        btnRegistrarEditorial = new javax.swing.JButton();
+        btnLimpiarEditorial = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -96,12 +91,23 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
         lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id1.setText("ID DE LIBRO");
-        jPanel4.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 220, -1));
+        lect_id1.setText("NOMBRE DE LA EDITORIAL");
+        jPanel4.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 300, -1));
+
+        txtNombreEditorial.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtNombreEditorial.setForeground(new java.awt.Color(102, 102, 102));
+        txtNombreEditorial.setText("Introduce el nombre de la editorial");
+        txtNombreEditorial.setBorder(null);
+        txtNombreEditorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreEditorialActionPerformed(evt);
+            }
+        });
+        jPanel4.add(txtNombreEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 390, 30));
 
         separador3.setBackground(new java.awt.Color(244, 121, 32));
         separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel4.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 400, 10));
+        jPanel4.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 400, 10));
 
         jPanel6.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -118,39 +124,25 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
 
         jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        jButton3.setBackground(new java.awt.Color(255, 153, 0));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("GUARDAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarEditorial.setBackground(new java.awt.Color(255, 153, 0));
+        btnRegistrarEditorial.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnRegistrarEditorial.setText("REGISTRAR");
+        btnRegistrarEditorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnRegistrarEditorialActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
+        jPanel4.add(btnRegistrarEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 160, -1));
 
-        jButton2.setBackground(new java.awt.Color(255, 153, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton2.setText("LIMPIAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnLimpiarEditorial.setBackground(new java.awt.Color(255, 153, 0));
+        btnLimpiarEditorial.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnLimpiarEditorial.setText("LIMPIAR");
+        btnLimpiarEditorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnLimpiarEditorialActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
-
-        lect_id2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id2.setText("ID_AUTOR");
-        jPanel4.add(lect_id2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 220, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 400, 30));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 400, 30));
-
-        separador4.setBackground(new java.awt.Color(244, 121, 32));
-        separador4.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel4.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 97, 400, -1));
+        jPanel4.add(btnLimpiarEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -166,20 +158,30 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void txtNombreEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreEditorialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_txtNombreEditorialActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnRegistrarEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEditorialActionPerformed
+        Editoriales editorial = new Editoriales(txtNombreEditorial.getText() );
+        
+        EditorialesDao dao = new EditorialesDao();
+        try {
+            dao.addUser(editorial);
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cleanFields();
+    }//GEN-LAST:event_btnRegistrarEditorialActionPerformed
+
+    private void btnLimpiarEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEditorialActionPerformed
+        cleanFields();
+    }//GEN-LAST:event_btnLimpiarEditorialActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JButton btnLimpiarEditorial;
+    private javax.swing.JButton btnRegistrarEditorial;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -187,8 +189,7 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel lect_id1;
-    private javax.swing.JLabel lect_id2;
     private javax.swing.JSeparator separador3;
-    private javax.swing.JSeparator separador4;
+    private javax.swing.JTextField txtNombreEditorial;
     // End of variables declaration//GEN-END:variables
 }

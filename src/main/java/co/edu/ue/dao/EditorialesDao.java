@@ -18,7 +18,7 @@ public class EditorialesDao {
     }
     public Editoriales addUser(Editoriales user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT esitoriales VALUES(null, ?);";
+        String query = "INSERT editoriales VALUES(null, ?);";
         
         try {
             if (this.statement == null){

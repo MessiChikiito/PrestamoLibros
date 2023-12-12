@@ -1,6 +1,12 @@
 
 package co.edu.ue.ui;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Principal extends javax.swing.JFrame {
 
     public Principal() {
@@ -25,7 +31,7 @@ public class Principal extends javax.swing.JFrame {
         textcontraseña = new javax.swing.JPasswordField();
         separador2 = new javax.swing.JSeparator();
         buttonregistro = new javax.swing.JButton();
-        buttonentrar = new javax.swing.JButton();
+        btnIniciarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -104,19 +110,19 @@ public class Principal extends javax.swing.JFrame {
                 buttonregistroActionPerformed(evt);
             }
         });
-        INICIO.add(buttonregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 130, 40));
+        INICIO.add(buttonregistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 130, 40));
 
-        buttonentrar.setBackground(new java.awt.Color(251, 165, 26));
-        buttonentrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        buttonentrar.setText("ENTRAR");
-        buttonentrar.setBorder(null);
-        buttonentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonentrar.addActionListener(new java.awt.event.ActionListener() {
+        btnIniciarSesion.setBackground(new java.awt.Color(251, 165, 26));
+        btnIniciarSesion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnIniciarSesion.setText("INICIAR SESION");
+        btnIniciarSesion.setBorder(null);
+        btnIniciarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonentrarActionPerformed(evt);
+                btnIniciarSesionActionPerformed(evt);
             }
         });
-        INICIO.add(buttonentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 110, 40));
+        INICIO.add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,12 +150,12 @@ public class Principal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_buttonregistroActionPerformed
 
-    private void buttonentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonentrarActionPerformed
+    private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
         Menu v3 =new Menu();
         v3.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_buttonentrarActionPerformed
-
+    }//GEN-LAST:event_btnIniciarSesionActionPerformed
+   
     private void textusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textusuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textusuarioActionPerformed
@@ -191,7 +197,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel INICIO;
-    private javax.swing.JButton buttonentrar;
+    private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton buttonregistro;
     private javax.swing.JLabel contraseña;
     private javax.swing.JLabel inicio_de_sesion1;
