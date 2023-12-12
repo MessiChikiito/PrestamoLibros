@@ -4,6 +4,16 @@
  */
 package co.edu.ue.ui;
 
+
+import co.edu.ue.entidades.Autores;
+import co.edu.ue.util.Conexion;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+
 /**
  *
  * @author mxmol
@@ -15,6 +25,7 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
      */
     public z7Re_AutorLibro() {
         initComponents();
+        cargarCombo(jComboBox1);
     }
 
     /**
@@ -113,10 +124,24 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
 
+<<<<<<< HEAD
         jButton2.setBackground(new java.awt.Color(255, 153, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("LIMPIAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
+=======
+        lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_id1.setText("ID AUTOR");
+        jPanel1.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
+
+        separador2.setBackground(new java.awt.Color(244, 121, 32));
+        separador2.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 410, 10));
+
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 410, 30));
+
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> d6b3b4a4c9e1bb5ac3337de5ff388ae2edfcfd6e
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
@@ -161,4 +186,33 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
     private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
     // End of variables declaration//GEN-END:variables
+
+  
+private void cargarCombo(JComboBox c) {
+    DefaultComboBoxModel<Autores> comboModel = new DefaultComboBoxModel<>();
+
+     try {
+        Conexion connection = new Conexion();
+        Connection con = connection.getConectar();
+        
+        try (Statement statement = con.createStatement();
+             ResultSet rs = statement.executeQuery("SELECT aut_id, aut_nombre FROM Autores")) {
+
+            while (rs.next()) {
+                Autores autor = new Autores();
+                autor.setAut_id(rs.getInt("aut_id"));
+                autor.setAut_nombre(rs.getString("aut_nombre"));
+                comboModel.addElement(autor);
+            }
+        } // The resources (Statement and ResultSet) will be closed here.
+
+    } catch (SQLException e) {
+        // Handle the exception, log it, or display an error message
+        e.printStackTrace();
+    }
+
+    c.setModel(comboModel);
+}
+        
+    
 }
