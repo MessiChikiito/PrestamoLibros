@@ -114,7 +114,7 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 280, 10));
 
         nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        nombre.setText("NOMBRE");
+        nombre.setText("NOMBRES");
         nombre.setNextFocusableComponent(textnombre);
         jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, 20));
 
@@ -135,7 +135,7 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 280, 10));
 
         apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        apellido.setText("APELLIDO");
+        apellido.setText("APELLIDOS");
         apellido.setNextFocusableComponent(textapellido);
         jPanel1.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
 
@@ -296,13 +296,22 @@ public class Registro extends javax.swing.JFrame {
     }//GEN-LAST:event_texttelefonoActionPerformed
 
     private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
-        // TODO add your handling code here:
+        cleanFields();
     }//GEN-LAST:event_borrarActionPerformed
 
     private void textcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textcontraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textcontraseñaActionPerformed
-
+    
+    private void cleanFields(){
+        textdocumento.setText("");
+        textnombre.setText("");
+        textapellido.setText("");
+        textcorreo.setText("");
+        textcontraseña.setText("");
+        texttelefono.setText("");
+    }
+    
     private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
         Usuarios usuario = new Usuarios(textnombre.getText(), textapellido.getText(), 
         textcorreo.getText(), textcontraseña.getText(), textdocumento.getText(), texttelefono.getText() );
@@ -383,7 +392,5 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JTextField texttelefono;
     // End of variables declaration//GEN-END:variables
 
-    private void cleanFields() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
 }

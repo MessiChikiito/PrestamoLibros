@@ -17,7 +17,7 @@ public class PrestamosDao {
     }
     public Prestamos addUser(Prestamos user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT datos VALUES(null, ?,?,?,?,?);";
+        String query = "INSERT prestamos VALUES(null, ?,?,?,?,?);";
         
         try {
             if (this.statement == null){
@@ -30,7 +30,7 @@ public class PrestamosDao {
                 
                 int response = this.statement.executeUpdate();
                 if(response > 0)
-                    JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
+                    JOptionPane.showMessageDialog(null, "Se ha registrado el prestamo");
             }
         } catch (Exception e) {
             System.out.println(""+e.getMessage());

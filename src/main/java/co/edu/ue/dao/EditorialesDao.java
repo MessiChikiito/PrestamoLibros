@@ -18,7 +18,7 @@ public class EditorialesDao {
     }
     public Editoriales addUser(Editoriales user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT datos VALUES(null, ?);";
+        String query = "INSERT esitoriales VALUES(null, ?);";
         
         try {
             if (this.statement == null){
@@ -26,7 +26,7 @@ public class EditorialesDao {
                 this.statement.setString(1, user.getEdit_nombre());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
-                    JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
+                    JOptionPane.showMessageDialog(null, "Se ha registrado la editorial");
             }
         } catch (Exception e) {
             System.out.println(""+e.getMessage());

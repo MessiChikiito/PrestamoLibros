@@ -30,7 +30,7 @@ public class UsuariosDao {
                 this.statement.setString(6, user.getUsur_telefono());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
-                    JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
+                    JOptionPane.showMessageDialog(null, "Se ha registrado el Usuario");
             }
         } catch (Exception e) {
             System.out.println(""+e.getMessage());

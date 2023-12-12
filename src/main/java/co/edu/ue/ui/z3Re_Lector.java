@@ -4,6 +4,10 @@
  */
 package co.edu.ue.ui;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author mxmol
@@ -28,9 +32,6 @@ public class z3Re_Lector extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        lect_id = new javax.swing.JLabel();
-        textlect_id = new javax.swing.JTextField();
-        separador1 = new javax.swing.JSeparator();
         lect_nombre = new javax.swing.JLabel();
         textlect_nombre = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
@@ -70,25 +71,6 @@ public class z3Re_Lector extends javax.swing.JPanel {
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
-
-        lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id.setText("ID DEL LECTOR");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 160, -1));
-
-        textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_id.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_id.setText("Introduce nombre del usuario");
-        textlect_id.setBorder(null);
-        textlect_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_idActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 410, 30));
-
-        separador1.setBackground(new java.awt.Color(244, 121, 32));
-        separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 410, 10));
 
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre.setText("NOMBRE ");
@@ -208,7 +190,7 @@ public class z3Re_Lector extends javax.swing.JPanel {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 130, -1));
 
-        jButton3.setText("GUARDAR");
+        jButton3.setText("Registrar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -228,38 +210,55 @@ public class z3Re_Lector extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_nombreActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+                                       
+        Usuarios usuario = new Usuarios(textnombre.getText(), textapellido.getText(), 
+        textcorreo.getText(), textcontraseña.getText(), textdocumento.getText(), texttelefono.getText() );
+        
+        UsuariosDao dao = new UsuariosDao();
+        try {
+            dao.addUser(usuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cleanFields();
+        
 
-    private void textlect_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_idActionPerformed
-
-    private void textlect_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_apellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_apellidoActionPerformed
-
-    private void textlect_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_direccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_direccionActionPerformed
-
-    private void textlect_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_telefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_telefonoActionPerformed
-
-    private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_documentoActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_textlect_documentoActionPerformed
 
+    private void textlect_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_telefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_telefonoActionPerformed
+
+    private void textlect_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_direccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_direccionActionPerformed
+
+    private void textlect_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_apellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_apellidoActionPerformed
+
+    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombreActionPerformed
+
+        private void cleanFields(){
+        textdocumento.setText("");
+        textnombre.setText("");
+        textapellido.setText("");
+        textcorreo.setText("");
+        textcontraseña.setText("");
+        texttelefono.setText("");
+    }
+        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
@@ -270,10 +269,8 @@ public class z3Re_Lector extends javax.swing.JPanel {
     private javax.swing.JLabel lect_apellido;
     private javax.swing.JLabel lect_direccion;
     private javax.swing.JLabel lect_documento;
-    private javax.swing.JLabel lect_id;
     private javax.swing.JLabel lect_nombre;
     private javax.swing.JLabel lect_telefono;
-    private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
     private javax.swing.JSeparator separador3;
     private javax.swing.JSeparator separador4;
@@ -282,7 +279,6 @@ public class z3Re_Lector extends javax.swing.JPanel {
     private javax.swing.JTextField textlect_apellido;
     private javax.swing.JTextField textlect_direccion;
     private javax.swing.JTextField textlect_documento;
-    private javax.swing.JTextField textlect_id;
     private javax.swing.JTextField textlect_nombre;
     private javax.swing.JTextField textlect_telefono;
     // End of variables declaration//GEN-END:variables

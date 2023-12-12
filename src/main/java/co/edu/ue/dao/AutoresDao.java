@@ -18,7 +18,7 @@ public class AutoresDao {
     }
     public Autores addUser(Autores user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT datos VALUES(null, ?,?);";
+        String query = "INSERT autores VALUES(null, ?,?);";
         
         try {
             if (this.statement == null){
@@ -27,7 +27,7 @@ public class AutoresDao {
                 this.statement.setString(2, user.getAut_apellido());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
-                    JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
+                    JOptionPane.showMessageDialog(null, "Se ha registrado el autor");
             }
         } catch (Exception e) {
             System.out.println(""+e.getMessage());
