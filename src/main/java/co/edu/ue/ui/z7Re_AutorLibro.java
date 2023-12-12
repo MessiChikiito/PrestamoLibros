@@ -31,12 +31,12 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         lect_id = new javax.swing.JLabel();
         separador1 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         lect_id1 = new javax.swing.JLabel();
         separador2 = new javax.swing.JSeparator();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -61,11 +61,11 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
 
         lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_id.setText("CODIGO LIBRO");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 200, -1));
+        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
+        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -82,40 +82,46 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        jButton2.setText("LIMPIAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_id1.setText("ID AUTOR");
+        jPanel1.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 200, -1));
+
+        separador2.setBackground(new java.awt.Color(244, 121, 32));
+        separador2.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 410, 10));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 410, 30));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 410, 30));
 
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("GUARDAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
 
-        lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id1.setText("ID AUTOR");
-        jPanel1.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
-
-        separador2.setBackground(new java.awt.Color(244, 121, 32));
-        separador2.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 410, 10));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 410, 30));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 410, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -129,17 +135,17 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

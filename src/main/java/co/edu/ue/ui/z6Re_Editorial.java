@@ -32,8 +32,8 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         textlect_id = new javax.swing.JTextField();
         separador1 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -58,7 +58,7 @@ public class z6Re_Editorial extends javax.swing.JPanel {
 
         lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_id.setText("NOMBRE EDITORIAL");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
+        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 200, -1));
 
         textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_id.setForeground(new java.awt.Color(102, 102, 102));
@@ -69,11 +69,11 @@ public class z6Re_Editorial extends javax.swing.JPanel {
                 textlect_idActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 410, 30));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
+        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -90,21 +90,25 @@ public class z6Re_Editorial extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        jButton2.setText("LIMPIAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
-
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("GUARDAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
+
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -122,13 +126,13 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_idActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -29,8 +29,6 @@ public class z5Re_Autor extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         lect_id1 = new javax.swing.JLabel();
@@ -39,9 +37,9 @@ public class z5Re_Autor extends javax.swing.JPanel {
         lect_nombre1 = new javax.swing.JLabel();
         separador4 = new javax.swing.JSeparator();
         jPanel6 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -79,22 +77,6 @@ public class z5Re_Autor extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        jButton2.setText("LIMPIAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
-
-        jButton3.setText("GUARDAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
-
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -104,18 +86,18 @@ public class z5Re_Autor extends javax.swing.JPanel {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
         lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_id1.setText("TITULO DEL LIBRO");
-        jPanel4.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, -1));
+        jPanel4.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 220, -1));
 
         textlect_id1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_id1.setForeground(new java.awt.Color(102, 102, 102));
@@ -126,19 +108,19 @@ public class z5Re_Autor extends javax.swing.JPanel {
                 textlect_id1ActionPerformed(evt);
             }
         });
-        jPanel4.add(textlect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+        jPanel4.add(textlect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 390, 30));
 
         separador3.setBackground(new java.awt.Color(244, 121, 32));
         separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel4.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
+        jPanel4.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 400, 10));
 
         lect_nombre1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre1.setText("ID_EDITORIAL");
-        jPanel4.add(lect_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 220, -1));
+        jPanel4.add(lect_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 220, -1));
 
         separador4.setBackground(new java.awt.Color(244, 121, 32));
         separador4.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel4.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 410, 10));
+        jPanel4.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 410, 10));
 
         jPanel6.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -155,29 +137,34 @@ public class z5Re_Autor extends javax.swing.JPanel {
 
         jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        jButton4.setText("LIMPIAR");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
-
-        jButton5.setText("GUARDAR");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
-
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 410, 30));
+        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setText("GUARDAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
+
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -193,36 +180,26 @@ public class z5Re_Autor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void textlect_id1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_id1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_id1ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

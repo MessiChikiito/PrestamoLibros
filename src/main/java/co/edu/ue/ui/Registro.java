@@ -70,7 +70,7 @@ public class Registro extends javax.swing.JFrame {
 
         negro_login1.setBackground(new java.awt.Color(51, 49, 50));
         negro_login1.setOpaque(true);
-        jPanel1.add(negro_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 60, 500));
+        jPanel1.add(negro_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 60, 520));
 
         naranja_login.setBackground(new java.awt.Color(251, 165, 26));
         naranja_login.setOpaque(true);
@@ -100,7 +100,7 @@ public class Registro extends javax.swing.JFrame {
 
         textdocumento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textdocumento.setForeground(new java.awt.Color(153, 153, 153));
-        textdocumento.setText("Introduce documento de identificacion");
+        textdocumento.setText("Introduce documento de identificacion"); // NOI18N
         textdocumento.setBorder(null);
         textdocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,17 +252,11 @@ public class Registro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

@@ -42,8 +42,8 @@ public class z4Re_Libro extends javax.swing.JPanel {
         txtApellidoAutor = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
-        btnLimpiarAutor = new javax.swing.JButton();
-        btnRegistrarAutor = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -68,7 +68,8 @@ public class z4Re_Libro extends javax.swing.JPanel {
 
         lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_id.setText("NOMBRE DEL AUTOR");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, -1));
+        lect_id.setPreferredSize(new java.awt.Dimension(85, 22));
+        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 220, -1));
 
         txtNombreAutor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtNombreAutor.setForeground(new java.awt.Color(102, 102, 102));
@@ -79,15 +80,15 @@ public class z4Re_Libro extends javax.swing.JPanel {
                 txtNombreAutorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombreAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+        jPanel1.add(txtNombreAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 410, 30));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
+        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 410, 10));
 
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre.setText("APELLIDO DEL AUTOR");
-        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 220, -1));
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 220, -1));
 
         txtApellidoAutor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtApellidoAutor.setForeground(new java.awt.Color(102, 102, 102));
@@ -98,11 +99,11 @@ public class z4Re_Libro extends javax.swing.JPanel {
                 txtApellidoAutorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtApellidoAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+        jPanel1.add(txtApellidoAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 410, 30));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -119,21 +120,25 @@ public class z4Re_Libro extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        btnLimpiarAutor.setText("LIMPIAR");
-        btnLimpiarAutor.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setText("GUARDAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarAutorActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimpiarAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
 
-        btnRegistrarAutor.setText("REGISTRAR");
-        btnRegistrarAutor.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarAutorActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistrarAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -155,31 +160,23 @@ public class z4Re_Libro extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreAutorActionPerformed
 
-    private void btnLimpiarAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAutorActionPerformed
-        cleanFields();  
-    }//GEN-LAST:event_btnLimpiarAutorActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
     
     private void cleanFields(){
         txtNombreAutor.setText("");
         txtApellidoAutor.setText("");
     }
     
-    private void btnRegistrarAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarAutorActionPerformed
-        Autores autor = new Autores(txtNombreAutor.getText(), txtApellidoAutor.getText());
-        
-        AutoresDao dao = new AutoresDao();
-        try {
-            dao.addUser(autor);
-        } catch (SQLException ex) {
-            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        cleanFields();  
-    }//GEN-LAST:event_btnRegistrarAutorActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLimpiarAutor;
-    private javax.swing.JButton btnRegistrarAutor;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

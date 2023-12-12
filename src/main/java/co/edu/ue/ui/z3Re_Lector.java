@@ -50,11 +50,11 @@ public class z3Re_Lector extends javax.swing.JPanel {
         txtDocumentoLector = new javax.swing.JTextField();
         separador6 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
-        btnLimpiarLector = new javax.swing.JButton();
-        btnRegistrarLector = new javax.swing.JButton();
         txtNombreLector = new javax.swing.JTextField();
         lect_documento1 = new javax.swing.JLabel();
         separador7 = new javax.swing.JSeparator();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -187,22 +187,6 @@ public class z3Re_Lector extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        btnLimpiarLector.setText("LIMPIAR");
-        btnLimpiarLector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarLectorActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnLimpiarLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 130, -1));
-
-        btnRegistrarLector.setText("Registrar");
-        btnRegistrarLector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarLectorActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnRegistrarLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 130, -1));
-
         txtNombreLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtNombreLector.setForeground(new java.awt.Color(102, 102, 102));
         txtNombreLector.setText("Introduce nombre del lector");
@@ -221,6 +205,26 @@ public class z3Re_Lector extends javax.swing.JPanel {
         separador7.setBackground(new java.awt.Color(244, 121, 32));
         separador7.setForeground(new java.awt.Color(244, 121, 32));
         jPanel1.add(separador7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 410, 10));
+
+        jButton3.setBackground(new java.awt.Color(255, 153, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setText("GUARDAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
+
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -267,10 +271,6 @@ public class z3Re_Lector extends javax.swing.JPanel {
         // TODO add your handling code here:
     }                                                  
 
-    private void btnLimpiarLectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarLectorActionPerformed
-        cleanFields();
-    }//GEN-LAST:event_btnLimpiarLectorActionPerformed
-
     private void txtDocumentoLectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDocumentoLectorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDocumentoLectorActionPerformed
@@ -295,6 +295,14 @@ public class z3Re_Lector extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreLectorActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
         private void cleanFields(){
         txtNombreLector.setText("");
         txtApellidoLector.setText("");
@@ -306,8 +314,8 @@ public class z3Re_Lector extends javax.swing.JPanel {
         
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLimpiarLector;
-    private javax.swing.JButton btnRegistrarLector;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

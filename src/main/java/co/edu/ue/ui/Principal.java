@@ -59,6 +59,7 @@ public class Principal extends javax.swing.JFrame {
         textusuario.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textusuario.setForeground(new java.awt.Color(102, 102, 102));
         textusuario.setText("Introduce nombre del usuario");
+        textusuario.setToolTipText("");
         textusuario.setBorder(null);
         textusuario.setNextFocusableComponent(usuario);
         textusuario.addActionListener(new java.awt.event.ActionListener() {
