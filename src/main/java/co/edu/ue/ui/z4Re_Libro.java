@@ -180,14 +180,11 @@ public class z4Re_Libro extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void cbxlectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxlectorActionPerformed
-       private void cleanFields(){
-        txtNombreLector.setText("");
-    }
+
+    
     }//GEN-LAST:event_cbxlectorActionPerformed
     
-    private void cleanFields(){
-        txtTituloLibro.setText("");
-    }
+   
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
