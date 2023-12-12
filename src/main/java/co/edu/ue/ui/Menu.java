@@ -38,10 +38,10 @@ public class Menu extends javax.swing.JFrame {
         Re_Libros = new javax.swing.JButton();
         Re_Autor = new javax.swing.JButton();
         Re_Editorial = new javax.swing.JButton();
+        Autor_Libros = new javax.swing.JButton();
+        Consulta_libros = new javax.swing.JButton();
+        Consulta_prestamo = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        Re_Editorial1 = new javax.swing.JButton();
-        Re_Editorial2 = new javax.swing.JButton();
-        Re_Editorial3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         Content = new javax.swing.JPanel();
 
@@ -123,7 +123,7 @@ public class Menu extends javax.swing.JFrame {
 
         Re_Editorial.setBackground(new java.awt.Color(251, 165, 26));
         Re_Editorial.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        Re_Editorial.setText("CONSULTA DE PRESTAMOS");
+        Re_Editorial.setText("REGISTRO EDITORIAL");
         Re_Editorial.setBorder(null);
         Re_Editorial.setBorderPainted(false);
         Re_Editorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -132,7 +132,41 @@ public class Menu extends javax.swing.JFrame {
                 Re_EditorialActionPerformed(evt);
             }
         });
-        jPanel3.add(Re_Editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 220, 30));
+        jPanel3.add(Re_Editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 220, 30));
+
+        Autor_Libros.setBackground(new java.awt.Color(251, 165, 26));
+        Autor_Libros.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Autor_Libros.setText("AUTOR / LIBRO");
+        Autor_Libros.setBorder(null);
+        Autor_Libros.setBorderPainted(false);
+        Autor_Libros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Autor_Libros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Autor_LibrosActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Autor_Libros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 220, 30));
+
+        Consulta_libros.setBackground(new java.awt.Color(251, 165, 26));
+        Consulta_libros.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Consulta_libros.setText("CONSULTA DE LIBROS");
+        Consulta_libros.setBorder(null);
+        Consulta_libros.setBorderPainted(false);
+        Consulta_libros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel3.add(Consulta_libros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 220, 30));
+
+        Consulta_prestamo.setBackground(new java.awt.Color(251, 165, 26));
+        Consulta_prestamo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Consulta_prestamo.setText("CONSULTA DE PRESTAMOS");
+        Consulta_prestamo.setBorder(null);
+        Consulta_prestamo.setBorderPainted(false);
+        Consulta_prestamo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Consulta_prestamo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Consulta_prestamoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Consulta_prestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 220, 30));
 
         jButton7.setBackground(new java.awt.Color(255, 102, 0));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -144,35 +178,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 220, 40));
-
-        Re_Editorial1.setBackground(new java.awt.Color(251, 165, 26));
-        Re_Editorial1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        Re_Editorial1.setText("REGISTRO EDITORIAL");
-        Re_Editorial1.setBorder(null);
-        Re_Editorial1.setBorderPainted(false);
-        Re_Editorial1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(Re_Editorial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 220, 30));
-
-        Re_Editorial2.setBackground(new java.awt.Color(251, 165, 26));
-        Re_Editorial2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        Re_Editorial2.setText("AUTOR / LIBRO");
-        Re_Editorial2.setBorder(null);
-        Re_Editorial2.setBorderPainted(false);
-        Re_Editorial2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Re_Editorial2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Re_Editorial2ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(Re_Editorial2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 220, 30));
-
-        Re_Editorial3.setBackground(new java.awt.Color(251, 165, 26));
-        Re_Editorial3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        Re_Editorial3.setText("CONSULTA DE LIBROS");
-        Re_Editorial3.setBorder(null);
-        Re_Editorial3.setBorderPainted(false);
-        Re_Editorial3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(Re_Editorial3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 220, 30));
 
         Menu.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 260, 500));
 
@@ -236,24 +241,30 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_Re_LectorActionPerformed
 
     private void Re_AutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_AutorActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel(new z5Re_Autor());
     }//GEN-LAST:event_Re_AutorActionPerformed
 
-    private void Re_Editorial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_Editorial2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Re_Editorial2ActionPerformed
+    private void Autor_LibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Autor_LibrosActionPerformed
+        ShowJPanel(new z7Re_AutorLibro());
+    }//GEN-LAST:event_Autor_LibrosActionPerformed
 
-    private void Re_EditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_EditorialActionPerformed
-        ShowJPanel(new z3Re_Lector());
-    }//GEN-LAST:event_Re_EditorialActionPerformed
+    private void Consulta_prestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Consulta_prestamoActionPerformed
+        ShowJPanel(new z6Re__Editorial());
+    }//GEN-LAST:event_Consulta_prestamoActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        Principal v1 =new Principal();
+        v1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void Re_LibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_LibrosActionPerformed
-        ShowJPanel(new z3Re_Lector());
+        ShowJPanel(new z4Re_Libro());
     }//GEN-LAST:event_Re_LibrosActionPerformed
+
+    private void Re_EditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_EditorialActionPerformed
+        ShowJPanel(new z6Re__Editorial());
+    }//GEN-LAST:event_Re_EditorialActionPerformed
 
     
     public static void main(String args[]) {
@@ -289,15 +300,15 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Autor_Libros;
     private javax.swing.JButton Bienvenido;
+    private javax.swing.JButton Consulta_libros;
+    private javax.swing.JButton Consulta_prestamo;
     private javax.swing.JPanel Content;
     private javax.swing.JPanel Menu;
     private javax.swing.JButton Prestamos;
     private javax.swing.JButton Re_Autor;
     private javax.swing.JButton Re_Editorial;
-    private javax.swing.JButton Re_Editorial1;
-    private javax.swing.JButton Re_Editorial2;
-    private javax.swing.JButton Re_Editorial3;
     private javax.swing.JButton Re_Lector;
     private javax.swing.JButton Re_Libros;
     private javax.swing.JButton jButton7;
