@@ -27,71 +27,307 @@ public class z2Prestamo extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        separador6 = new javax.swing.JSeparator();
+        textlect_telefono = new javax.swing.JTextField();
+        textlect_nombre = new javax.swing.JTextField();
+        textlect_nombre1 = new javax.swing.JTextField();
+        textlect_nombre2 = new javax.swing.JTextField();
+        textlect_nombre3 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        lect_direccion = new javax.swing.JLabel();
+        textlect_documento = new javax.swing.JTextField();
+        lect_nombre = new javax.swing.JLabel();
+        lect_apellido = new javax.swing.JLabel();
+        textlect_direccion = new javax.swing.JTextField();
+        lect_documento = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        separador5 = new javax.swing.JSeparator();
+        lect_telefono = new javax.swing.JLabel();
+        separador4 = new javax.swing.JSeparator();
+        textlect_nombre4 = new javax.swing.JTextField();
+        textlect_nombre5 = new javax.swing.JTextField();
+        textlect_nombre6 = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
+
+        setPreferredSize(new java.awt.Dimension(800, 500));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(526, 500));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 253, Short.MAX_VALUE)
+        separador6.setBackground(new java.awt.Color(244, 121, 32));
+        separador6.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 410, 10));
+
+        textlect_telefono.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_telefono.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_telefono.setText("Introduce el codigo del libro");
+        textlect_telefono.setBorder(null);
+        textlect_telefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_telefonoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 410, 30));
+
+        textlect_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textlect_nombre.setText("Dia");
+        textlect_nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        textlect_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 70, 30));
+
+        textlect_nombre1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre1.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textlect_nombre1.setText("Año");
+        textlect_nombre1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        textlect_nombre1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        textlect_nombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombre1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 70, 30));
+
+        textlect_nombre2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre2.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textlect_nombre2.setText("Mes");
+        textlect_nombre2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        textlect_nombre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombre2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 70, 30));
+
+        textlect_nombre3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre3.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre3.setText("AÑO");
+        textlect_nombre3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        textlect_nombre3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombre3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 70, 30));
+
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
+
+        lect_direccion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_direccion.setText("ID DEL LECTOR");
+        jPanel1.add(lect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 410, -1));
+
+        textlect_documento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_documento.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_documento.setText("Introduce el ID del usuario que registra");
+        textlect_documento.setBorder(null);
+        textlect_documento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_documentoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 410, 30));
+
+        lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_nombre.setText("FECHA DE PRESTAMO");
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 230, -1));
+
+        lect_apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_apellido.setText("FECHA DE DEVOLUCION");
+        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 410, -1));
+
+        textlect_direccion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_direccion.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_direccion.setText("Introduce el ID del lector que pidel el prestamo");
+        textlect_direccion.setBorder(null);
+        textlect_direccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_direccionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+
+        lect_documento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_documento.setText("ID DEL USUARIO");
+        jPanel1.add(lect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 410, -1));
+
+        jPanel3.setBackground(new java.awt.Color(251, 165, 26));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
+
+        jButton3.setText("GUARDAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 130, -1));
+
+        separador5.setBackground(new java.awt.Color(244, 121, 32));
+        separador5.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 410, 10));
+
+        lect_telefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_telefono.setText("CODIGO DEL LIBRO");
+        jPanel1.add(lect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 410, -1));
+
+        separador4.setBackground(new java.awt.Color(244, 121, 32));
+        separador4.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
+
+        textlect_nombre4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre4.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textlect_nombre4.setText("Año");
+        textlect_nombre4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        textlect_nombre4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        textlect_nombre4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombre4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 70, 30));
+
+        textlect_nombre5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre5.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textlect_nombre5.setText("Mes");
+        textlect_nombre5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        textlect_nombre5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombre5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 70, 30));
+
+        textlect_nombre6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre6.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textlect_nombre6.setText("Dia");
+        textlect_nombre6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        textlect_nombre6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombre6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 70, 30));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, -1));
+
+        jPanel7.setPreferredSize(new java.awt.Dimension(280, 500));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 280, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 547, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textlect_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_telefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_telefonoActionPerformed
+
+    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombreActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_documentoActionPerformed
+
+    private void textlect_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_direccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_direccionActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void textlect_nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombre1ActionPerformed
+
+    private void textlect_nombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombre2ActionPerformed
+
+    private void textlect_nombre3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombre3ActionPerformed
+
+    private void textlect_nombre4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombre4ActionPerformed
+
+    private void textlect_nombre5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombre5ActionPerformed
+
+    private void textlect_nombre6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombre6ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cerrarsesion;
-    private javax.swing.JButton Cerrarsesion1;
-    private javax.swing.JButton P2Solicitud_prestamo;
-    private javax.swing.JButton P2Solicitud_prestamo1;
-    private javax.swing.JButton P3Registro_lector;
-    private javax.swing.JButton P3Registro_lector1;
-    private javax.swing.JButton P4Registro_libros;
-    private javax.swing.JButton P4Registro_libros1;
-    private javax.swing.JButton P5Registro_autor;
-    private javax.swing.JButton P5Registro_autor1;
-    private javax.swing.JButton P6Registro_editorial;
-    private javax.swing.JButton P6Registro_editorial1;
-    private javax.swing.JButton P7Consultar_libros;
-    private javax.swing.JButton P7Consultar_libros1;
-    private javax.swing.JButton P8Autor_libro;
-    private javax.swing.JButton P8Autor_libro1;
-    private javax.swing.JButton P9Consultar_prestamos1;
-    private javax.swing.JButton P9Consultar_prestamos2;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JLabel lect_apellido;
+    private javax.swing.JLabel lect_direccion;
+    private javax.swing.JLabel lect_documento;
+    private javax.swing.JLabel lect_nombre;
+    private javax.swing.JLabel lect_telefono;
+    private javax.swing.JSeparator separador4;
+    private javax.swing.JSeparator separador5;
+    private javax.swing.JSeparator separador6;
+    private javax.swing.JTextField textlect_direccion;
+    private javax.swing.JTextField textlect_documento;
+    private javax.swing.JTextField textlect_nombre;
+    private javax.swing.JTextField textlect_nombre1;
+    private javax.swing.JTextField textlect_nombre2;
+    private javax.swing.JTextField textlect_nombre3;
+    private javax.swing.JTextField textlect_nombre4;
+    private javax.swing.JTextField textlect_nombre5;
+    private javax.swing.JTextField textlect_nombre6;
+    private javax.swing.JTextField textlect_telefono;
     // End of variables declaration//GEN-END:variables
 }

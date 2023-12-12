@@ -15,6 +15,7 @@ public class z4Re_Libros extends javax.swing.JPanel {
      */
     public z4Re_Libros() {
         initComponents();
+        
     }
 
     /**
@@ -28,18 +29,15 @@ public class z4Re_Libros extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        lect_id = new javax.swing.JLabel();
-        textlect_id = new javax.swing.JTextField();
-        separador1 = new javax.swing.JSeparator();
         lect_nombre = new javax.swing.JLabel();
         textlect_nombre = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
         lect_apellido = new javax.swing.JLabel();
-        textlect_apellido = new javax.swing.JTextField();
-        separador3 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -62,28 +60,9 @@ public class z4Re_Libros extends javax.swing.JPanel {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
-        lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id.setText("COD DEL LIBRO");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 160, -1));
-
-        textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_id.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_id.setText("Introduce nombre del usuario");
-        textlect_id.setBorder(null);
-        textlect_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_idActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
-
-        separador1.setBackground(new java.awt.Color(244, 121, 32));
-        separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
-
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre.setText("TITULO");
-        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, -1));
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 160, -1));
 
         textlect_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre.setForeground(new java.awt.Color(102, 102, 102));
@@ -94,30 +73,15 @@ public class z4Re_Libros extends javax.swing.JPanel {
                 textlect_nombreActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 410, 30));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 410, 10));
 
         lect_apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_apellido.setText("EDITOR");
-        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 160, -1));
-
-        textlect_apellido.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_apellido.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_apellido.setText("Introduce nombre del usuario");
-        textlect_apellido.setBorder(null);
-        textlect_apellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_apellidoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 410, 30));
-
-        separador3.setBackground(new java.awt.Color(244, 121, 32));
-        separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 410, 10));
+        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 160, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -150,6 +114,21 @@ public class z4Re_Libros extends javax.swing.JPanel {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 400, 230));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -166,14 +145,6 @@ public class z4Re_Libros extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_nombreActionPerformed
 
-    private void textlect_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_idActionPerformed
-
-    private void textlect_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_apellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_apellidoActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -189,14 +160,11 @@ public class z4Re_Libros extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lect_apellido;
-    private javax.swing.JLabel lect_id;
     private javax.swing.JLabel lect_nombre;
-    private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
-    private javax.swing.JSeparator separador3;
-    private javax.swing.JTextField textlect_apellido;
-    private javax.swing.JTextField textlect_id;
     private javax.swing.JTextField textlect_nombre;
     // End of variables declaration//GEN-END:variables
 }

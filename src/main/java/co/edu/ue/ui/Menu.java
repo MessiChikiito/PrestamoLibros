@@ -13,14 +13,17 @@ public class Menu extends javax.swing.JFrame {
     }
 
     private void InitContent(){
-        ShowJPanel(new Bienvenido());
+        ShowJPanel(new z1Bienvenida());
     }
     
     private void ShowJPanel (JPanel p){
         p.setSize(800,500);
         p.setLocation(0,0);
+        
         Content.removeAll();
         Content.add (p, BorderLayout.CENTER);
+        Content.revalidate();
+        Content.repaint();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -29,13 +32,16 @@ public class Menu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        Bienvenido = new javax.swing.JButton();
+        Prestamos = new javax.swing.JButton();
+        Re_Lector = new javax.swing.JButton();
+        Re_Libros = new javax.swing.JButton();
+        Re_Autor = new javax.swing.JButton();
+        Re_Editorial = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        Re_Editorial1 = new javax.swing.JButton();
+        Re_Editorial2 = new javax.swing.JButton();
+        Re_Editorial3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         Content = new javax.swing.JPanel();
 
@@ -50,65 +56,115 @@ public class Menu extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(51, 49, 50));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(244, 121, 32));
-        jButton1.setText("BIENVENIDA");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Bienvenido.setBackground(new java.awt.Color(251, 165, 26));
+        Bienvenido.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Bienvenido.setText("BIENVENIDA");
+        Bienvenido.setBorder(null);
+        Bienvenido.setBorderPainted(false);
+        Bienvenido.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Bienvenido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BienvenidoActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 160, 40));
+        jPanel3.add(Bienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 220, 30));
 
-        jButton2.setBackground(new java.awt.Color(244, 121, 32));
-        jButton2.setText("PRESTAMOS");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Prestamos.setBackground(new java.awt.Color(251, 165, 26));
+        Prestamos.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Prestamos.setText("PRESTAMOS");
+        Prestamos.setBorder(null);
+        Prestamos.setBorderPainted(false);
+        Prestamos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Prestamos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                PrestamosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 160, 40));
+        jPanel3.add(Prestamos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 220, 30));
 
-        jButton3.setBackground(new java.awt.Color(244, 121, 32));
-        jButton3.setText("REGISTRO DEL LECTOR");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Re_Lector.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Lector.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Lector.setText("REGISTRO DEL LECTOR");
+        Re_Lector.setBorder(null);
+        Re_Lector.setBorderPainted(false);
+        Re_Lector.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Re_Lector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                Re_LectorActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 160, 40));
+        jPanel3.add(Re_Lector, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 220, 30));
 
-        jButton4.setBackground(new java.awt.Color(244, 121, 32));
-        jButton4.setText("REGISTRO DE LIBROS");
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 160, 40));
+        Re_Libros.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Libros.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Libros.setText("REGISTRO DE LIBROS");
+        Re_Libros.setBorder(null);
+        Re_Libros.setBorderPainted(false);
+        Re_Libros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel3.add(Re_Libros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 220, 30));
 
-        jButton5.setBackground(new java.awt.Color(244, 121, 32));
-        jButton5.setText("jButton5");
-        jButton5.setBorder(null);
-        jButton5.setBorderPainted(false);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 160, 40));
+        Re_Autor.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Autor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Autor.setText("REGISTRO DE AUTOR");
+        Re_Autor.setBorder(null);
+        Re_Autor.setBorderPainted(false);
+        Re_Autor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Re_Autor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Re_AutorActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Re_Autor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 220, 30));
 
-        jButton6.setBackground(new java.awt.Color(244, 121, 32));
-        jButton6.setText("jButton6");
-        jButton6.setBorder(null);
-        jButton6.setBorderPainted(false);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 160, 40));
+        Re_Editorial.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Editorial.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Editorial.setText("CONSULTA DE PRESTAMOS");
+        Re_Editorial.setBorder(null);
+        Re_Editorial.setBorderPainted(false);
+        Re_Editorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Re_Editorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Re_EditorialActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Re_Editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 220, 30));
 
-        jButton7.setText("jButton7");
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 160, 40));
+        jButton7.setText("CERRAR SESION");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 160, 40));
+
+        Re_Editorial1.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Editorial1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Editorial1.setText("REGISTRO EDITORIAL");
+        Re_Editorial1.setBorder(null);
+        Re_Editorial1.setBorderPainted(false);
+        Re_Editorial1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel3.add(Re_Editorial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 220, 30));
+
+        Re_Editorial2.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Editorial2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Editorial2.setText("AUTOR / LIBRO");
+        Re_Editorial2.setBorder(null);
+        Re_Editorial2.setBorderPainted(false);
+        Re_Editorial2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Re_Editorial2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Re_Editorial2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Re_Editorial2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 220, 30));
+
+        Re_Editorial3.setBackground(new java.awt.Color(251, 165, 26));
+        Re_Editorial3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Re_Editorial3.setText("CONSULTA DE LIBROS");
+        Re_Editorial3.setBorder(null);
+        Re_Editorial3.setBorderPainted(false);
+        Re_Editorial3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel3.add(Re_Editorial3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 220, 30));
 
         Menu.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 260, 500));
 
@@ -159,21 +215,35 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BienvenidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BienvenidoActionPerformed
+        ShowJPanel(new z1Bienvenida());
+    }//GEN-LAST:event_BienvenidoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void PrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrestamosActionPerformed
+        ShowJPanel(new z2Prestamo());
+    }//GEN-LAST:event_PrestamosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void Re_LectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_LectorActionPerformed
+        ShowJPanel(new z3Re_Lector());
+    }//GEN-LAST:event_Re_LectorActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void Re_AutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_AutorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Re_AutorActionPerformed
+
+    private void Re_Editorial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_Editorial2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Re_Editorial2ActionPerformed
+
+    private void Re_EditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_EditorialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Re_EditorialActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -207,14 +277,17 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bienvenido;
     private javax.swing.JPanel Content;
     private javax.swing.JPanel Menu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton Prestamos;
+    private javax.swing.JButton Re_Autor;
+    private javax.swing.JButton Re_Editorial;
+    private javax.swing.JButton Re_Editorial1;
+    private javax.swing.JButton Re_Editorial2;
+    private javax.swing.JButton Re_Editorial3;
+    private javax.swing.JButton Re_Lector;
+    private javax.swing.JButton Re_Libros;
     private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

@@ -8,12 +8,12 @@ package co.edu.ue.ui;
  *
  * @author mxmol
  */
-public class z3Re_Lector extends javax.swing.JPanel {
+public class z5Re_Autor extends javax.swing.JPanel {
 
     /**
      * Creates new form z3Re_Lector
      */
-    public z3Re_Lector() {
+    public z5Re_Autor() {
         initComponents();
     }
 
@@ -28,21 +28,15 @@ public class z3Re_Lector extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        lect_id = new javax.swing.JLabel();
+        textlect_id = new javax.swing.JTextField();
+        separador1 = new javax.swing.JSeparator();
         lect_nombre = new javax.swing.JLabel();
         textlect_nombre = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
         lect_apellido = new javax.swing.JLabel();
         textlect_apellido = new javax.swing.JTextField();
         separador3 = new javax.swing.JSeparator();
-        lect_direccion = new javax.swing.JLabel();
-        textlect_direccion = new javax.swing.JTextField();
-        separador4 = new javax.swing.JSeparator();
-        lect_telefono = new javax.swing.JLabel();
-        textlect_telefono = new javax.swing.JTextField();
-        separador5 = new javax.swing.JSeparator();
-        lect_documento = new javax.swing.JLabel();
-        textlect_documento = new javax.swing.JTextField();
-        separador6 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -68,9 +62,28 @@ public class z3Re_Lector extends javax.swing.JPanel {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
+        lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_id.setText("COD DEL LIBRO");
+        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 160, -1));
+
+        textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_id.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_id.setText("Introduce nombre del usuario");
+        textlect_id.setBorder(null);
+        textlect_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_idActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+
+        separador1.setBackground(new java.awt.Color(244, 121, 32));
+        separador1.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
+
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_nombre.setText("NOMBRE ");
-        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 160, -1));
+        lect_nombre.setText("TITULO");
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, -1));
 
         textlect_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre.setForeground(new java.awt.Color(102, 102, 102));
@@ -81,15 +94,15 @@ public class z3Re_Lector extends javax.swing.JPanel {
                 textlect_nombreActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 410, 30));
+        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 410, 10));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
 
         lect_apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_apellido.setText("APELLIDO ");
-        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 160, -1));
+        lect_apellido.setText("EDITOR");
+        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 160, -1));
 
         textlect_apellido.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_apellido.setForeground(new java.awt.Color(102, 102, 102));
@@ -100,68 +113,11 @@ public class z3Re_Lector extends javax.swing.JPanel {
                 textlect_apellidoActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 30));
+        jPanel1.add(textlect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 410, 30));
 
         separador3.setBackground(new java.awt.Color(244, 121, 32));
         separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 410, 10));
-
-        lect_direccion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_direccion.setText("DIRECCION");
-        jPanel1.add(lect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, -1));
-
-        textlect_direccion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_direccion.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_direccion.setText("Introduce nombre del usuario");
-        textlect_direccion.setBorder(null);
-        textlect_direccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_direccionActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
-
-        separador4.setBackground(new java.awt.Color(244, 121, 32));
-        separador4.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
-
-        lect_telefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_telefono.setText("TELEFONO");
-        jPanel1.add(lect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 160, -1));
-
-        textlect_telefono.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_telefono.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_telefono.setText("Introduce nombre del usuario");
-        textlect_telefono.setBorder(null);
-        textlect_telefono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_telefonoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 410, 30));
-
-        separador5.setBackground(new java.awt.Color(244, 121, 32));
-        separador5.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 410, 10));
-
-        lect_documento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_documento.setText("DOCUMENTO");
-        jPanel1.add(lect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 160, -1));
-
-        textlect_documento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_documento.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_documento.setText("Introduce nombre del usuario");
-        textlect_documento.setBorder(null);
-        textlect_documento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_documentoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 410, 30));
-
-        separador6.setBackground(new java.awt.Color(244, 121, 32));
-        separador6.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 410, 10));
+        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -184,7 +140,7 @@ public class z3Re_Lector extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 130, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
 
         jButton3.setText("GUARDAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +148,7 @@ public class z3Re_Lector extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 130, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -210,21 +166,13 @@ public class z3Re_Lector extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_nombreActionPerformed
 
+    private void textlect_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_idActionPerformed
+
     private void textlect_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_apellidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_apellidoActionPerformed
-
-    private void textlect_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_direccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_direccionActionPerformed
-
-    private void textlect_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_telefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_telefonoActionPerformed
-
-    private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_documentoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -242,19 +190,13 @@ public class z3Re_Lector extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lect_apellido;
-    private javax.swing.JLabel lect_direccion;
-    private javax.swing.JLabel lect_documento;
+    private javax.swing.JLabel lect_id;
     private javax.swing.JLabel lect_nombre;
-    private javax.swing.JLabel lect_telefono;
+    private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
     private javax.swing.JSeparator separador3;
-    private javax.swing.JSeparator separador4;
-    private javax.swing.JSeparator separador5;
-    private javax.swing.JSeparator separador6;
     private javax.swing.JTextField textlect_apellido;
-    private javax.swing.JTextField textlect_direccion;
-    private javax.swing.JTextField textlect_documento;
+    private javax.swing.JTextField textlect_id;
     private javax.swing.JTextField textlect_nombre;
-    private javax.swing.JTextField textlect_telefono;
     // End of variables declaration//GEN-END:variables
 }
