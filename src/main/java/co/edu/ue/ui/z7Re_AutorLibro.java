@@ -8,12 +8,12 @@ package co.edu.ue.ui;
  *
  * @author mxmol
  */
-public class z6Re_Editorial extends javax.swing.JPanel {
+public class z7Re_AutorLibro extends javax.swing.JPanel {
 
     /**
      * Creates new form z3Re_Lector
      */
-    public z6Re_Editorial() {
+    public z7Re_AutorLibro() {
         initComponents();
     }
 

@@ -4,6 +4,13 @@
  */
 package co.edu.ue.ui;
 
+
+import co.edu.ue.dao.AutoresDao;
+import co.edu.ue.entidades.Autores;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author mxmol
@@ -29,14 +36,14 @@ public class z4Re_Libro extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         lect_id = new javax.swing.JLabel();
-        textlect_id = new javax.swing.JTextField();
+        txtNombreAutor = new javax.swing.JTextField();
         separador1 = new javax.swing.JSeparator();
         lect_nombre = new javax.swing.JLabel();
-        textlect_nombre = new javax.swing.JTextField();
+        txtApellidoAutor = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnLimpiarAutor = new javax.swing.JButton();
+        btnRegistrarAutor = new javax.swing.JButton();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -63,16 +70,16 @@ public class z4Re_Libro extends javax.swing.JPanel {
         lect_id.setText("NOMBRE DEL AUTOR");
         jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, -1));
 
-        textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_id.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_id.setText("Introduce el nombre del autor");
-        textlect_id.setBorder(null);
-        textlect_id.addActionListener(new java.awt.event.ActionListener() {
+        txtNombreAutor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtNombreAutor.setForeground(new java.awt.Color(102, 102, 102));
+        txtNombreAutor.setText("Introduce el nombre del autor");
+        txtNombreAutor.setBorder(null);
+        txtNombreAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_idActionPerformed(evt);
+                txtNombreAutorActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+        jPanel1.add(txtNombreAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
@@ -82,16 +89,16 @@ public class z4Re_Libro extends javax.swing.JPanel {
         lect_nombre.setText("APELLIDO DEL AUTOR");
         jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 220, -1));
 
-        textlect_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_nombre.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_nombre.setText("Introduce el apellido del autor");
-        textlect_nombre.setBorder(null);
-        textlect_nombre.addActionListener(new java.awt.event.ActionListener() {
+        txtApellidoAutor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtApellidoAutor.setForeground(new java.awt.Color(102, 102, 102));
+        txtApellidoAutor.setText("Introduce el apellido del autor");
+        txtApellidoAutor.setBorder(null);
+        txtApellidoAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_nombreActionPerformed(evt);
+                txtApellidoAutorActionPerformed(evt);
             }
         });
-        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+        jPanel1.add(txtApellidoAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));
@@ -112,21 +119,21 @@ public class z4Re_Libro extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 280, 500));
 
-        jButton2.setText("LIMPIAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnLimpiarAutor.setText("LIMPIAR");
+        btnLimpiarAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnLimpiarAutorActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
+        jPanel1.add(btnLimpiarAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 433, 130, 40));
 
-        jButton3.setText("GUARDAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarAutor.setText("REGISTRAR");
+        btnRegistrarAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnRegistrarAutorActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
+        jPanel1.add(btnRegistrarAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -140,26 +147,39 @@ public class z4Re_Libro extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
+    private void txtApellidoAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoAutorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_nombreActionPerformed
+    }//GEN-LAST:event_txtApellidoAutorActionPerformed
 
-    private void textlect_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_idActionPerformed
+    private void txtNombreAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreAutorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_idActionPerformed
+    }//GEN-LAST:event_txtNombreAutorActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnLimpiarAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAutorActionPerformed
+        cleanFields();  
+    }//GEN-LAST:event_btnLimpiarAutorActionPerformed
+    
+    private void cleanFields(){
+        txtNombreAutor.setText("");
+        txtApellidoAutor.setText("");
+    }
+    
+    private void btnRegistrarAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarAutorActionPerformed
+        Autores autor = new Autores(txtNombreAutor.getText(), txtApellidoAutor.getText());
+        
+        AutoresDao dao = new AutoresDao();
+        try {
+            dao.addUser(autor);
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cleanFields();  
+    }//GEN-LAST:event_btnRegistrarAutorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnLimpiarAutor;
+    private javax.swing.JButton btnRegistrarAutor;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -167,7 +187,7 @@ public class z4Re_Libro extends javax.swing.JPanel {
     private javax.swing.JLabel lect_nombre;
     private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
-    private javax.swing.JTextField textlect_id;
-    private javax.swing.JTextField textlect_nombre;
+    private javax.swing.JTextField txtApellidoAutor;
+    private javax.swing.JTextField txtNombreAutor;
     // End of variables declaration//GEN-END:variables
 }

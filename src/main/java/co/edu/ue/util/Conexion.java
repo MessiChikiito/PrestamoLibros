@@ -28,8 +28,6 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             this.con = DriverManager.getConnection(this.cadConexion, this.user, this.pass);
-            JOptionPane.showMessageDialog(null, "Hay conexión");
-            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error, no hay conexión"+e.toString());
         }
