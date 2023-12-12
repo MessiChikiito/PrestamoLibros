@@ -17,7 +17,7 @@ public class LibrosDao {
     }
     public Libros addUser(Libros user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT datos VALUES(null,?,?);";
+        String query = "INSERT libros VALUES(null,?,?);";
 
         try {
             if (this.statement == null){

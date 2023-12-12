@@ -17,7 +17,7 @@ public class LectoresDao {
     }
     public Lectores addUser(Lectores user) throws SQLException{
         Connection conex = this.conexion.getConectar();
-        String query = "INSERT datos VALUES(null, ?,?,?,?,?,?);";
+        String query = "INSERT lectores VALUES(null, ?,?,?,?,?,?);";
         
         try {
             if (this.statement == null){
@@ -30,7 +30,7 @@ public class LectoresDao {
                 this.statement.setString(6, user.getLect_email());
                 int response = this.statement.executeUpdate();
                 if(response > 0)
-                    JOptionPane.showMessageDialog(null, "Se ha registrado el libro");
+                    JOptionPane.showMessageDialog(null, "Se ha registrado el lector");
             }
         } catch (Exception e) {
             System.out.println(""+e.getMessage());

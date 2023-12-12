@@ -4,6 +4,10 @@
  */
 package co.edu.ue.ui;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author mxmol
@@ -186,7 +190,7 @@ public class z3Re_Lector extends javax.swing.JPanel {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 130, -1));
 
-        jButton3.setText("GUARDAR");
+        jButton3.setText("Registrar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -206,10 +210,21 @@ public class z3Re_Lector extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_nombreActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+                                       
+        Usuarios usuario = new Usuarios(textnombre.getText(), textapellido.getText(), 
+        textcorreo.getText(), textcontraseña.getText(), textdocumento.getText(), texttelefono.getText() );
+        
+        UsuariosDao dao = new UsuariosDao();
+        try {
+            dao.addUser(usuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cleanFields();
+        
 
+<<<<<<< HEAD
     private void textlect_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_apellidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_apellidoActionPerformed
@@ -225,15 +240,43 @@ public class z3Re_Lector extends javax.swing.JPanel {
     private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_documentoActionPerformed
+=======
+    }//GEN-LAST:event_jButton3ActionPerformed
+>>>>>>> 80a83ab11da027d2c8a000ae5041ac29f67fefff
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_textlect_documentoActionPerformed
 
+    private void textlect_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_telefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_telefonoActionPerformed
+
+    private void textlect_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_direccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_direccionActionPerformed
+
+    private void textlect_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_apellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_apellidoActionPerformed
+
+    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombreActionPerformed
+
+        private void cleanFields(){
+        textdocumento.setText("");
+        textnombre.setText("");
+        textapellido.setText("");
+        textcorreo.setText("");
+        textcontraseña.setText("");
+        texttelefono.setText("");
+    }
+        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
