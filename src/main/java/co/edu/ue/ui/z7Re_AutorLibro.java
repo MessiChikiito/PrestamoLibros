@@ -96,7 +96,7 @@ public class z7Re_AutorLibro extends javax.swing.JPanel {
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
         lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id1.setText("ID_AUTOR");
+        lect_id1.setText("ID DE LIBRO");
         jPanel4.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 220, -1));
 
         separador3.setBackground(new java.awt.Color(244, 121, 32));

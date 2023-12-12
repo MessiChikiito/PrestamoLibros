@@ -1,7 +1,11 @@
 
 package co.edu.ue.ui;
 
-import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Principal extends javax.swing.JFrame {
 
@@ -147,9 +151,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonregistroActionPerformed
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-
+        Menu v3 =new Menu();
+        v3.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
-
+   
     private void textusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textusuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textusuarioActionPerformed
