@@ -101,6 +101,11 @@ public class Menu extends javax.swing.JFrame {
         Re_Libros.setBorder(null);
         Re_Libros.setBorderPainted(false);
         Re_Libros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Re_Libros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Re_LibrosActionPerformed(evt);
+            }
+        });
         jPanel3.add(Re_Libros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 220, 30));
 
         Re_Autor.setBackground(new java.awt.Color(251, 165, 26));
@@ -239,12 +244,16 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_Re_Editorial2ActionPerformed
 
     private void Re_EditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_EditorialActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel(new z3Re_Lector());
     }//GEN-LAST:event_Re_EditorialActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void Re_LibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Re_LibrosActionPerformed
+        ShowJPanel(new z3Re_Lector());
+    }//GEN-LAST:event_Re_LibrosActionPerformed
 
     
     public static void main(String args[]) {

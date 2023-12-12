@@ -163,11 +163,10 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreEditorialActionPerformed
 
-<<<<<<< HEAD
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
-=======
+
     private void btnLimpiarEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEditorialActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLimpiarEditorialActionPerformed
@@ -183,7 +182,6 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         }
         cleanFields();
     }//GEN-LAST:event_btnRegistrarEditorialActionPerformed
->>>>>>> d6b3b4a4c9e1bb5ac3337de5ff388ae2edfcfd6e
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
