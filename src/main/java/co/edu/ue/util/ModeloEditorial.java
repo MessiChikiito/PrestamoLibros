@@ -1,6 +1,7 @@
+
 package co.edu.ue.util;
 
-import co.edu.ue.entidades.Lectores;
+import co.edu.ue.entidades.Editoriales;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,30 +10,25 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ModeloLector {
+public class ModeloEditorial {
 
-    public ArrayList<Lectores> getLectores() {
+
+    public ArrayList<Editoriales> getEditoriales() {
         Conexion conexion = new Conexion(); // Crear una instancia de la clase Conexion
         Connection con = conexion.getConectar();
         Statement stmt = null;
         ResultSet rs = null;
-        ArrayList<Lectores> listaLectores = new ArrayList<>();
+        ArrayList<Editoriales> listaEditoriales = new ArrayList<>();
 
         try {
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM lectores"); // Actualizar el nombre de la tabla a "lectores"
+            rs = stmt.executeQuery("SELECT * FROM editoriales"); // Actualizar el nombre de la tabla a "lectores"
 
             while (rs.next()) {
-                Lectores lectores = new Lectores();
-                lectores.setLect_id(rs.getInt("lect_id"));
-                lectores.setLect_nombre(rs.getString("lect_nombre"));
-                lectores.setLect_apellido(rs.getString("lect_apellido"));
-                lectores.setLect_direccion(rs.getString("lect_direccion"));
-                lectores.setLect_telefono(rs.getString("lect_telefono"));
-                lectores.setLect_documento(rs.getString("lect_documento"));
-                lectores.setLect_email(rs.getString("lect_email"));
-                
-                listaLectores.add(lectores);
+                Editoriales editoriales = new Editoriales();
+                editoriales.setEdit_id(rs.getInt("edit_id"));
+                editoriales.setEdit_nombre(rs.getString("edit_nombre"));
+                listaEditoriales.add(editoriales);
             }
         } catch (SQLException ex) {
             Logger.getLogger(ModeloLector.class.getName()).log(Level.SEVERE, null, ex);
@@ -52,6 +48,7 @@ public class ModeloLector {
                 e.printStackTrace();
             }
         }
-        return listaLectores;
+        return listaEditoriales;
     }
+    
 }

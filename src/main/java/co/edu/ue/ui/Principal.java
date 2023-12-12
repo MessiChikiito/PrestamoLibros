@@ -76,7 +76,7 @@ public class Principal extends javax.swing.JFrame {
         contraseña.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         contraseña.setLabelFor(textcontraseña);
         contraseña.setText("CONTRASEÑA");
-        INICIO.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 320, 20));
+        INICIO.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 320, 20));
 
         textcontraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textcontraseña.setForeground(new java.awt.Color(102, 102, 102));
@@ -87,7 +87,7 @@ public class Principal extends javax.swing.JFrame {
                 textcontraseñaActionPerformed(evt);
             }
         });
-        INICIO.add(textcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 330, 30));
+        INICIO.add(textcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 310, 40));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));

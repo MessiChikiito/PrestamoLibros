@@ -13,15 +13,19 @@ public class z2Prestamo extends javax.swing.JPanel {
         llenarLectores();
     }
     
-    private void llenarLectores(){
-    ModeloLector  modLector = new ModeloLector();
+    private void llenarLectores() {
+    ModeloLector modLector = new ModeloLector();
     ArrayList<Lectores> listaLectores = modLector.getLectores();
     cbxlector.removeAllItems();
-    
-    for(int i=0; i<listaLectores.size();i++){
-    cbxlector.addItem(listaLectores.get(i).getLect_nombre());
+
+    System.out.println("Cantidad de lectores obtenidos: " + listaLectores.size());
+
+    for (int i = 0; i < listaLectores.size(); i++) {
+        cbxlector.addItem(listaLectores.get(i).getLect_nombre());
     }
-            }
+    
+    System.out.println("Cantidad de elementos en el JComboBox: " + cbxlector.getItemCount());
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -208,6 +212,11 @@ public class z2Prestamo extends javax.swing.JPanel {
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 410, 30));
 
         cbxlector.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
+        cbxlector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxlectorActionPerformed(evt);
+            }
+        });
         jPanel1.add(cbxlector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -263,6 +272,10 @@ public class z2Prestamo extends javax.swing.JPanel {
     private void textlect_nombre6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombre6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_nombre6ActionPerformed
+
+    private void cbxlectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxlectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxlectorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

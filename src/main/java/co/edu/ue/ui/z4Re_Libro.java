@@ -7,7 +7,10 @@ package co.edu.ue.ui;
 
 import co.edu.ue.dao.AutoresDao;
 import co.edu.ue.entidades.Autores;
+import co.edu.ue.entidades.Editoriales;
+import co.edu.ue.util.ModeloEditorial;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -22,7 +25,22 @@ public class z4Re_Libro extends javax.swing.JPanel {
      */
     public z4Re_Libro() {
         initComponents();
+        llenarEditorial();
     }
+    
+        private void llenarEditorial() {
+    ModeloEditorial modEditorial = new ModeloEditorial();
+    ArrayList<Editoriales> listaEditoriales = modEditorial.getEditoriales();
+    cbxlector.removeAllItems();
+
+    System.out.println("Cantidad de lectores obtenidos: " + listaEditoriales.size());
+
+    for (int i = 0; i < listaEditoriales.size(); i++) {
+        cbxlector.addItem(listaEditoriales.get(i).getEdit_nombre());
+    }
+    
+    System.out.println("Cantidad de elementos en el JComboBox: " + cbxlector.getItemCount());
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,14 +54,14 @@ public class z4Re_Libro extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         lect_id = new javax.swing.JLabel();
-        txtNombreAutor = new javax.swing.JTextField();
+        txtTituloLibro = new javax.swing.JTextField();
         separador1 = new javax.swing.JSeparator();
         lect_nombre = new javax.swing.JLabel();
-        txtApellidoAutor = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        cbxlector = new javax.swing.JComboBox<>();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -67,39 +85,28 @@ public class z4Re_Libro extends javax.swing.JPanel {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
         lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id.setText("NOMBRE DEL AUTOR");
+        lect_id.setText("TITULO DEL LIBRO");
         lect_id.setPreferredSize(new java.awt.Dimension(85, 22));
         jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 220, -1));
 
-        txtNombreAutor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txtNombreAutor.setForeground(new java.awt.Color(102, 102, 102));
-        txtNombreAutor.setText("Introduce el nombre del autor");
-        txtNombreAutor.setBorder(null);
-        txtNombreAutor.addActionListener(new java.awt.event.ActionListener() {
+        txtTituloLibro.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTituloLibro.setForeground(new java.awt.Color(102, 102, 102));
+        txtTituloLibro.setText("Introduce el titulo libro");
+        txtTituloLibro.setBorder(null);
+        txtTituloLibro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreAutorActionPerformed(evt);
+                txtTituloLibroActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombreAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 410, 30));
+        jPanel1.add(txtTituloLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 410, 30));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
         jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 410, 10));
 
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_nombre.setText("APELLIDO DEL AUTOR");
+        lect_nombre.setText("ID_EDITORIALES");
         jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 220, -1));
-
-        txtApellidoAutor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txtApellidoAutor.setForeground(new java.awt.Color(102, 102, 102));
-        txtApellidoAutor.setText("Introduce el apellido del autor");
-        txtApellidoAutor.setBorder(null);
-        txtApellidoAutor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApellidoAutorActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtApellidoAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 410, 30));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));
@@ -140,6 +147,14 @@ public class z4Re_Libro extends javax.swing.JPanel {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, -1));
 
+        cbxlector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxlector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxlectorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cbxlector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 410, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,13 +167,9 @@ public class z4Re_Libro extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtApellidoAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoAutorActionPerformed
+    private void txtTituloLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloLibroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellidoAutorActionPerformed
-
-    private void txtNombreAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreAutorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreAutorActionPerformed
+    }//GEN-LAST:event_txtTituloLibroActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -167,14 +178,18 @@ public class z4Re_Libro extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cbxlectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxlectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxlectorActionPerformed
     
     private void cleanFields(){
-        txtNombreAutor.setText("");
-        txtApellidoAutor.setText("");
+        txtTituloLibro.setText("");
     }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cbxlector;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
@@ -184,7 +199,6 @@ public class z4Re_Libro extends javax.swing.JPanel {
     private javax.swing.JLabel lect_nombre;
     private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
-    private javax.swing.JTextField txtApellidoAutor;
-    private javax.swing.JTextField txtNombreAutor;
+    private javax.swing.JTextField txtTituloLibro;
     // End of variables declaration//GEN-END:variables
 }
