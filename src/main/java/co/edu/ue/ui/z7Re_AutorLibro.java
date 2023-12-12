@@ -19,10 +19,6 @@ import javax.swing.JComboBox;
  * @author mxmol
  */
 public class z7Re_AutorLibro extends javax.swing.JPanel {
-<<<<<<< HEAD
-
-=======
->>>>>>> 1268e5a1ebc9a8e5992782fa8afd54c82ed48a9f
 
     /**
      * Creates new form z3Re_Lector
