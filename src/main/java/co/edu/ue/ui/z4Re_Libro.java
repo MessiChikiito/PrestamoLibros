@@ -8,12 +8,12 @@ package co.edu.ue.ui;
  *
  * @author mxmol
  */
-public class z6Re_Editorial extends javax.swing.JPanel {
+public class z4Re_Libro extends javax.swing.JPanel {
 
     /**
      * Creates new form z3Re_Lector
      */
-    public z6Re_Editorial() {
+    public z4Re_Libro() {
         initComponents();
     }
 
@@ -31,6 +31,9 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         lect_id = new javax.swing.JLabel();
         textlect_id = new javax.swing.JTextField();
         separador1 = new javax.swing.JSeparator();
+        lect_nombre = new javax.swing.JLabel();
+        textlect_nombre = new javax.swing.JTextField();
+        separador2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -57,12 +60,12 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
         lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id.setText("NOMBRE EDITORIAL");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
+        lect_id.setText("NOMBRE DEL AUTOR");
+        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 220, -1));
 
         textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_id.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_id.setText("Introduce nombre de la editorial");
+        textlect_id.setText("Introduce el nombre del autor");
         textlect_id.setBorder(null);
         textlect_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +77,25 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
         jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
+
+        lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_nombre.setText("APELLIDO DEL AUTOR");
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 220, -1));
+
+        textlect_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        textlect_nombre.setForeground(new java.awt.Color(102, 102, 102));
+        textlect_nombre.setText("Introduce el apellido del autor");
+        textlect_nombre.setBorder(null);
+        textlect_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textlect_nombreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textlect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+
+        separador2.setBackground(new java.awt.Color(244, 121, 32));
+        separador2.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -118,6 +140,10 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textlect_nombreActionPerformed
+
     private void textlect_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_idActionPerformed
@@ -138,7 +164,10 @@ public class z6Re_Editorial extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lect_id;
+    private javax.swing.JLabel lect_nombre;
     private javax.swing.JSeparator separador1;
+    private javax.swing.JSeparator separador2;
     private javax.swing.JTextField textlect_id;
+    private javax.swing.JTextField textlect_nombre;
     // End of variables declaration//GEN-END:variables
 }
