@@ -28,17 +28,14 @@ public class z2Prestamo extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         separador6 = new javax.swing.JSeparator();
-        textlect_telefono = new javax.swing.JTextField();
         textlect_nombre = new javax.swing.JTextField();
         textlect_nombre1 = new javax.swing.JTextField();
         textlect_nombre2 = new javax.swing.JTextField();
         textlect_nombre3 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         lect_direccion = new javax.swing.JLabel();
-        textlect_documento = new javax.swing.JTextField();
         lect_nombre = new javax.swing.JLabel();
         lect_apellido = new javax.swing.JLabel();
-        textlect_direccion = new javax.swing.JTextField();
         lect_documento = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
@@ -48,6 +45,9 @@ public class z2Prestamo extends javax.swing.JPanel {
         textlect_nombre4 = new javax.swing.JTextField();
         textlect_nombre5 = new javax.swing.JTextField();
         textlect_nombre6 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
         jPanel7 = new javax.swing.JPanel();
 
         setPreferredSize(new java.awt.Dimension(800, 500));
@@ -59,18 +59,7 @@ public class z2Prestamo extends javax.swing.JPanel {
 
         separador6.setBackground(new java.awt.Color(244, 121, 32));
         separador6.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 410, 10));
-
-        textlect_telefono.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_telefono.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_telefono.setText("Introduce el codigo del libro");
-        textlect_telefono.setBorder(null);
-        textlect_telefono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_telefonoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 410, 30));
+        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 410, 10));
 
         textlect_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre.setForeground(new java.awt.Color(102, 102, 102));
@@ -130,18 +119,7 @@ public class z2Prestamo extends javax.swing.JPanel {
 
         lect_direccion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_direccion.setText("ID DEL LECTOR");
-        jPanel1.add(lect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 410, -1));
-
-        textlect_documento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_documento.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_documento.setText("Introduce el ID del usuario que registra");
-        textlect_documento.setBorder(null);
-        textlect_documento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_documentoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 410, 30));
+        jPanel1.add(lect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 410, -1));
 
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre.setText("FECHA DE PRESTAMO");
@@ -151,20 +129,9 @@ public class z2Prestamo extends javax.swing.JPanel {
         lect_apellido.setText("FECHA DE DEVOLUCION");
         jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 410, -1));
 
-        textlect_direccion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_direccion.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_direccion.setText("Introduce el ID del lector que pidel el prestamo");
-        textlect_direccion.setBorder(null);
-        textlect_direccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_direccionActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
-
         lect_documento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_documento.setText("ID DEL USUARIO");
-        jPanel1.add(lect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 410, -1));
+        jPanel1.add(lect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 410, -1));
 
         jPanel3.setBackground(new java.awt.Color(251, 165, 26));
 
@@ -191,7 +158,7 @@ public class z2Prestamo extends javax.swing.JPanel {
 
         separador5.setBackground(new java.awt.Color(244, 121, 32));
         separador5.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 410, 10));
+        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 410, -1));
 
         lect_telefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_telefono.setText("CODIGO DEL LIBRO");
@@ -199,7 +166,7 @@ public class z2Prestamo extends javax.swing.JPanel {
 
         separador4.setBackground(new java.awt.Color(244, 121, 32));
         separador4.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
+        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 410, 10));
 
         textlect_nombre4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         textlect_nombre4.setForeground(new java.awt.Color(102, 102, 102));
@@ -238,6 +205,15 @@ public class z2Prestamo extends javax.swing.JPanel {
         });
         jPanel1.add(textlect_nombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 70, 30));
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 410, 30));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 410, 30));
+
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, -1));
 
         jPanel7.setPreferredSize(new java.awt.Dimension(280, 500));
@@ -256,10 +232,6 @@ public class z2Prestamo extends javax.swing.JPanel {
         add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textlect_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_telefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_telefonoActionPerformed
-
     private void textlect_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_nombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textlect_nombreActionPerformed
@@ -267,14 +239,6 @@ public class z2Prestamo extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void textlect_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_documentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_documentoActionPerformed
-
-    private void textlect_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_direccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_direccionActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -308,6 +272,9 @@ public class z2Prestamo extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel7;
@@ -319,8 +286,6 @@ public class z2Prestamo extends javax.swing.JPanel {
     private javax.swing.JSeparator separador4;
     private javax.swing.JSeparator separador5;
     private javax.swing.JSeparator separador6;
-    private javax.swing.JTextField textlect_direccion;
-    private javax.swing.JTextField textlect_documento;
     private javax.swing.JTextField textlect_nombre;
     private javax.swing.JTextField textlect_nombre1;
     private javax.swing.JTextField textlect_nombre2;
@@ -328,6 +293,5 @@ public class z2Prestamo extends javax.swing.JPanel {
     private javax.swing.JTextField textlect_nombre4;
     private javax.swing.JTextField textlect_nombre5;
     private javax.swing.JTextField textlect_nombre6;
-    private javax.swing.JTextField textlect_telefono;
     // End of variables declaration//GEN-END:variables
 }

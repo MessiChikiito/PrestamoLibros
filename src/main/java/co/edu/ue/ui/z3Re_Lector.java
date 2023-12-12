@@ -53,6 +53,8 @@ public class z3Re_Lector extends javax.swing.JPanel {
         btnLimpiarLector = new javax.swing.JButton();
         btnRegistrarLector = new javax.swing.JButton();
         txtNombreLector = new javax.swing.JTextField();
+        lect_documento1 = new javax.swing.JLabel();
+        separador7 = new javax.swing.JSeparator();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -77,98 +79,98 @@ public class z3Re_Lector extends javax.swing.JPanel {
 
         lect_nombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_nombre.setText("NOMBRE ");
-        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 160, -1));
+        jPanel1.add(lect_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 160, -1));
 
         txtEmailLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtEmailLector.setForeground(new java.awt.Color(102, 102, 102));
-        txtEmailLector.setText("Email");
+        txtEmailLector.setText("Introduce email lector");
         txtEmailLector.setBorder(null);
         txtEmailLector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailLectorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtEmailLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 410, 30));
+        jPanel1.add(txtEmailLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 410, 30));
 
         separador2.setBackground(new java.awt.Color(244, 121, 32));
         separador2.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 410, 10));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 410, 10));
 
         lect_apellido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_apellido.setText("APELLIDO ");
-        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 160, -1));
+        jPanel1.add(lect_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 160, -1));
 
         txtApellidoLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtApellidoLector.setForeground(new java.awt.Color(102, 102, 102));
-        txtApellidoLector.setText("Introduce nombre del usuario");
+        txtApellidoLector.setText("Introduce apellido del lector");
         txtApellidoLector.setBorder(null);
         txtApellidoLector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtApellidoLectorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtApellidoLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 30));
+        jPanel1.add(txtApellidoLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 410, 30));
 
         separador3.setBackground(new java.awt.Color(244, 121, 32));
         separador3.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 410, 10));
+        jPanel1.add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 410, 10));
 
         lect_direccion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_direccion.setText("DIRECCIÓN");
-        jPanel1.add(lect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, -1));
+        jPanel1.add(lect_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 160, -1));
 
         txtDireccionLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtDireccionLector.setForeground(new java.awt.Color(102, 102, 102));
-        txtDireccionLector.setText("Introduce nombre del usuario");
+        txtDireccionLector.setText("Introduce la direccion del lector");
         txtDireccionLector.setBorder(null);
         txtDireccionLector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDireccionLectorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtDireccionLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 410, 30));
+        jPanel1.add(txtDireccionLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 410, 30));
 
         separador4.setBackground(new java.awt.Color(244, 121, 32));
         separador4.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
+        jPanel1.add(separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 410, 10));
 
         lect_telefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lect_telefono.setText("TELEFONO");
-        jPanel1.add(lect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 160, -1));
+        jPanel1.add(lect_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 160, -1));
 
         txtTelefonoLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtTelefonoLector.setForeground(new java.awt.Color(102, 102, 102));
-        txtTelefonoLector.setText("Introduce nombre del usuario");
+        txtTelefonoLector.setText("Introduce telefono del lector");
         txtTelefonoLector.setBorder(null);
         txtTelefonoLector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTelefonoLectorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtTelefonoLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 410, 30));
+        jPanel1.add(txtTelefonoLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 30));
 
         separador5.setBackground(new java.awt.Color(244, 121, 32));
         separador5.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 410, 10));
+        jPanel1.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 410, 10));
 
         lect_documento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_documento.setText("DOCUMENTO");
-        jPanel1.add(lect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 160, -1));
+        lect_documento.setText("EMAIL");
+        jPanel1.add(lect_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 160, -1));
 
         txtDocumentoLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtDocumentoLector.setForeground(new java.awt.Color(102, 102, 102));
-        txtDocumentoLector.setText("Introduce nombre del usuario");
+        txtDocumentoLector.setText("Introduce documento del lector");
         txtDocumentoLector.setBorder(null);
         txtDocumentoLector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDocumentoLectorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtDocumentoLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 410, 30));
+        jPanel1.add(txtDocumentoLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 410, 30));
 
         separador6.setBackground(new java.awt.Color(244, 121, 32));
         separador6.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 410, 10));
+        jPanel1.add(separador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -203,14 +205,22 @@ public class z3Re_Lector extends javax.swing.JPanel {
 
         txtNombreLector.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtNombreLector.setForeground(new java.awt.Color(102, 102, 102));
-        txtNombreLector.setText("Introduce nombre del usuario");
+        txtNombreLector.setText("Introduce nombre del lector");
         txtNombreLector.setBorder(null);
         txtNombreLector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreLectorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombreLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 410, 30));
+        jPanel1.add(txtNombreLector, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 410, 30));
+
+        lect_documento1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_documento1.setText("DOCUMENTO");
+        jPanel1.add(lect_documento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 160, -1));
+
+        separador7.setBackground(new java.awt.Color(244, 121, 32));
+        separador7.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 410, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -304,6 +314,7 @@ public class z3Re_Lector extends javax.swing.JPanel {
     private javax.swing.JLabel lect_apellido;
     private javax.swing.JLabel lect_direccion;
     private javax.swing.JLabel lect_documento;
+    private javax.swing.JLabel lect_documento1;
     private javax.swing.JLabel lect_nombre;
     private javax.swing.JLabel lect_telefono;
     private javax.swing.JSeparator separador2;
@@ -311,6 +322,7 @@ public class z3Re_Lector extends javax.swing.JPanel {
     private javax.swing.JSeparator separador4;
     private javax.swing.JSeparator separador5;
     private javax.swing.JSeparator separador6;
+    private javax.swing.JSeparator separador7;
     private javax.swing.JTextField txtApellidoLector;
     private javax.swing.JTextField txtDireccionLector;
     private javax.swing.JTextField txtDocumentoLector;

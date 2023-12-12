@@ -29,11 +29,14 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         lect_id = new javax.swing.JLabel();
-        textlect_id = new javax.swing.JTextField();
         separador1 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        lect_id1 = new javax.swing.JLabel();
+        separador2 = new javax.swing.JSeparator();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
 
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
@@ -57,23 +60,12 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 500));
 
         lect_id.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lect_id.setText("NOMBRE EDITORIAL");
-        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
-
-        textlect_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        textlect_id.setForeground(new java.awt.Color(102, 102, 102));
-        textlect_id.setText("Introduce nombre de la editorial");
-        textlect_id.setBorder(null);
-        textlect_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textlect_idActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textlect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 410, 30));
+        lect_id.setText("CODIGO LIBRO");
+        jPanel1.add(lect_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 200, -1));
 
         separador1.setBackground(new java.awt.Color(244, 121, 32));
         separador1.setForeground(new java.awt.Color(244, 121, 32));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 410, 10));
+        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 410, 10));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -106,6 +98,20 @@ public class z6Re_Editorial extends javax.swing.JPanel {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 433, 130, 40));
 
+        lect_id1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lect_id1.setText("ID AUTOR");
+        jPanel1.add(lect_id1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 200, -1));
+
+        separador2.setBackground(new java.awt.Color(244, 121, 32));
+        separador2.setForeground(new java.awt.Color(244, 121, 32));
+        jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 410, 10));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 410, 30));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 410, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,10 +123,6 @@ public class z6Re_Editorial extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void textlect_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textlect_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textlect_idActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -134,11 +136,14 @@ public class z6Re_Editorial extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lect_id;
+    private javax.swing.JLabel lect_id1;
     private javax.swing.JSeparator separador1;
-    private javax.swing.JTextField textlect_id;
+    private javax.swing.JSeparator separador2;
     // End of variables declaration//GEN-END:variables
 }
