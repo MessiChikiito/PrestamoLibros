@@ -13,31 +13,38 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author USER
- */
 public class ModeloLector {
     
     public ArrayList<Lectores> getLectores(){
-    Connection con =Conexion.getConexion();
-    Statement stmt;
-    ResultSet rs;
-    ArrayList<Lectores>listaLectores = new ArrayList<>();
+        Conexion conexion = new Conexion(); // Crear una instancia de la clase Conexion
+        Connection con = conexion.getConectar();
+        Statement stmt;
+        ResultSet rs;
+        ArrayList<Lectores> listaLectores = new ArrayList<>();
     
         try {
-            stmt =con.createStatement();
-            rs=stmt.executeQuery("SELECT * FROM autores");
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM autores");
+            
             while(rs.next()){
                 Lectores lectores = new Lectores();
                 lectores.setLect_id(rs.getInt("id"));
                 lectores.setLect_nombre(rs.getString("nombre"));
                 lectores.setLect_apellido(rs.getString("apellido"));
+                listaLectores.add(lectores);
             }
         } catch (SQLException ex) {
             Logger.getLogger(ModeloLector.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            // Cerrar la conexión aquí si es necesario
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return listaLectores;
     }
-    
 }
